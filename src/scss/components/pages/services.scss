@@ -1,0 +1,95 @@
+header {
+  width: 100vw;
+  height: 500px;
+  background-size: cover !important;
+  filter: brightness(0.8);
+}
+
+#intro_service {
+  .container {
+    padding-top: 150px;
+    position: relative;
+
+    .block_title {
+      background-color: $primary-color;
+      position: absolute;
+      right: 0;
+      top: -100px;
+      background-repeat: no-repeat !important;
+      padding: 30px 50px;
+      min-width: 400px;
+      filter: brightness(1.1);
+
+      h1 {
+        color: $light;
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+        font-weight: 200;
+
+        strong {
+          text-transform: uppercase;
+        }
+      }
+
+      a {
+        margin-top: 20px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 10px;
+
+        &:before {
+          content: "→";
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .colg {
+      width: 60%;
+
+      h2 {
+        color: $secondary-color;
+      }
+    }
+
+    .cold {
+      padding-left: 20%;
+      padding-top: 80px;
+
+      p {
+        &:last-child {
+          margin-bottom: 80px;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 50px;
+        height: 5px;
+        display: block;
+        background: $primary-color;
+      }
+    }
+  }
+}
+#assurance {
+  background-color: $light-gray;
+}
+
+#nos_points_fort {
+  @include liGray-to-white;
+
+  #section-cta-contact {
+    background: none;
+    margin-bottom: 200px;
+  }
+}
+
+#contact-service {
+  margin-top: 300px;
+
+  #contact {
+    background-color: $light !important;
+  }
+}

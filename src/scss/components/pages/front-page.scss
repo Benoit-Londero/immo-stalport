@@ -1,0 +1,473 @@
+#hero-container {
+  height: 90vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .swiper {
+    .swiper-wrapper {
+      overflow: hidden;
+
+      .swiper-slide {
+        height: 90vh;
+
+        img {
+          position: absolute;
+          z-index: 0;
+          filter: brightness(60%);
+          width: 100%;
+        }
+
+        .content {
+          position: relative;
+          margin-top: 250px;
+          left: 5vw;
+          z-index: 1;
+
+          p {
+            text-transform: uppercase;
+            color: $light;
+            letter-spacing: 3px;
+          }
+
+          h1 {
+            color: $light;
+            text-transform: uppercase;
+
+            strong {
+              font-weight: 800;
+            }
+          }
+
+          .cta {
+            line-height: 10rem;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    .swiper-button {
+      color: $light;
+      position: absolute;
+      right: 5vw;
+      left: auto;
+      border: 1px solid $light;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      text-align: center;
+
+      &::after {
+        font-size: 1.2rem;
+        margin: auto;
+      }
+    }
+
+    .swiper-button-prev {
+      margin-top: -80px;
+    }
+  }
+}
+
+#aboutus {
+  background-color: $light-gray;
+
+  .swiper-mobile {
+    display: none;
+  }
+
+  .grid {
+    position: relative;
+    width: 70vw;
+    margin: auto;
+    top: -100px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    height: 300px;
+    margin-bottom: 250px;
+
+    .card {
+      overflow: hidden;
+      height: 320px;
+      padding: 40px;
+      cursor: pointer;
+
+      h4 {
+        color: $light;
+        position: absolute;
+        z-index: 10;
+        bottom: 40px;
+        top: auto;
+        font-size: 2rem;
+        font-weight: 600;
+        text-shadow: 0px 0px 10px #000000a3;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        transition: all ease-in-out 200ms;
+        height: 400px;
+        margin-left: -40px;
+        margin-top: -40px;
+      }
+
+      &:hover {
+        &::before {
+          background-color: $hover-transparent;
+        }
+      }
+    }
+  }
+}
+
+#section_nosproduits {
+  padding-top: 350px;
+}
+
+#mot_president {
+  background-color: $light;
+  width: 100vw;
+  animation: slide-to-top 500ms;
+
+  .container {
+    .col-d {
+      h3 {
+        color: $secondary-color;
+        margin: 250px auto 50px auto;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+      p {
+        em {
+          color: $primary-color;
+          text-align: right;
+          font-style: italic;
+        }
+      }
+
+      p:has(em) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+#confiance {
+  @include liGray-to-white;
+  padding: 150px 0 550px 0;
+
+  .container {
+    text-align: center;
+
+    h2 {
+      font-weight: 200;
+      color: $secondary-color;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      margin: 50px auto;
+      text-align: center;
+      font-weight: 400;
+      color: $dark-gray;
+    }
+
+    .table_qualite {
+      display: flex;
+      gap: 50px;
+      justify-content: space-around;
+      margin-bottom: 80px;
+
+      .card_qualite {
+        width: 30%;
+        text-align: center;
+
+        h4 {
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+          color: $secondary-color;
+        }
+
+        p {
+          margin: 30px auto 10px auto;
+          display: block;
+
+          &::after {
+            content: "→";
+            color: $primary-color;
+            display: block;
+            margin-top: 10px;
+          }
+        }
+
+        img {
+          max-width: 80px;
+          margin: auto;
+          margin-bottom: 30px;
+        }
+      }
+
+      .card_qualite + .card_qualite {
+        border-left: 1px solid #eaeaea;
+        padding-left: 50px;
+      }
+    }
+
+    .cta {
+      border-radius: 20px;
+      letter-spacing: 5px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}
+
+#disclaimer {
+  position: relative;
+  top: -300px;
+
+  .container {
+    width: 80vw;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+    height: 600px;
+
+    img {
+      max-height: 100%;
+      text-align: right;
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    .box-content {
+      position: absolute;
+      top: 15%;
+      background-color: $secondary-color;
+      width: calc(50% - 100px);
+      height: calc(70% - 100px);
+      padding: 50px;
+
+      h3 {
+        color: $light;
+        font-weight: 300;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      p {
+        color: $light;
+        margin: 30px auto;
+      }
+    }
+  }
+}
+
+#actualites {
+  background-color: $light-gray;
+  .container {
+    padding: 100px 0;
+    border-bottom: 1px solid $middle-gray;
+
+    .intro_actu,
+    .grid_articles {
+      display: flex;
+      gap: 50px;
+    }
+
+    .intro_actu {
+      margin-bottom: 100px;
+
+      h2,
+      p {
+        width: 50%;
+      }
+
+      h2 {
+        color: $secondary-color;
+      }
+      p {
+        padding-top: 60px;
+      }
+    }
+
+    .grid_articles {
+      .card_article {
+        width: 50%;
+        h3 {
+          font-weight: 300;
+          color: $secondary-color;
+          margin-bottom: 30px;
+        }
+        &:last-child {
+          margin-top: 100px;
+        }
+      }
+    }
+
+    .view_more {
+      text-align: center;
+      margin-top: 200px;
+    }
+  }
+}
+
+#statistique {
+  margin-top: -600px;
+  padding-top: 500px;
+  background: $light-gray;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .col-g {
+      width: 60%;
+      padding-top: 150px;
+
+      .product_front {
+        display: flex;
+        gap: 30px;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0px 0px 18px 2px rgb(0 0 0 / 20%);
+        margin-bottom: 30px;
+
+        img {
+          width: 60px;
+        }
+
+        .txt {
+          h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .col-d {
+      width: 30%;
+
+      .block_stats {
+        padding: 30px;
+        border: 1px solid $dark-gray;
+
+        img {
+          margin-left: -100px;
+          position: absolute;
+        }
+
+        span {
+          margin-top: 150px;
+          display: block;
+
+          p {
+            text-align: left;
+            color: $primary-color;
+            font-size: 1.5rem;
+
+            em {
+              font-size: 1rem;
+              color: $middle-gray;
+            }
+          }
+        }
+      }
+
+      .getOffre {
+        margin-top: 30px;
+        background-color: $secondary-color;
+        padding: 30px;
+
+        h3 {
+          color: $primary-color;
+          font-size: 2rem;
+          line-height: 2.3rem;
+
+          strong {
+            color: $light;
+          }
+        }
+
+        p {
+          color: $light;
+          margin: 20px 0;
+        }
+
+        a {
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+#disclaimer_banner {
+  background-color: $light;
+  min-height: 400px;
+  padding-top: 350px;
+
+  .container {
+    min-height: 0px;
+    display: flex;
+    width: 80vw;
+
+    position: relative;
+    z-index: 2;
+
+    .colg {
+      width: 55%;
+      color: $light;
+      padding: 25px 40px;
+
+      h3,
+      p {
+        color: $light;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+        margin-bottom: 10px;
+      }
+    }
+
+    .cold {
+      width: 50%;
+      position: relative;
+
+      .cta {
+        position: absolute;
+        top: calc((100% - 44px) / 2);
+        left: -50px;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+#contact {
+  background-color: $light-gray !important;
+}

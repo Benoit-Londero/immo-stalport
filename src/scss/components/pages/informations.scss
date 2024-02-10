@@ -1,0 +1,136 @@
+.page-template-informations {
+  #aboutus {
+    background-color: $light !important;
+  }
+
+  #information,
+  #section_bleue,
+  #outro {
+    margin-top: -150px;
+    .colg {
+      h2 {
+        text-transform: uppercase;
+        color: $secondary-color;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        font-weight: 400;
+      }
+
+      h1 {
+        color: $primary-color;
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 3.2rem;
+
+        strong {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    li {
+      font-weight: 300;
+      color: #474955;
+    }
+
+    .cold {
+      padding-left: 20%;
+      padding-top: 100px;
+
+      h3 {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 5px;
+        font-weight: 400;
+        margin: 30px 0 15px;
+      }
+
+      .intro {
+        &::after {
+          content: "";
+          width: 50px;
+          height: 5px;
+          display: block;
+          background: $primary-color;
+          margin: 50px 0;
+        }
+      }
+
+      .def {
+        padding-bottom: 150px;
+        display: block;
+
+        h3 {
+          color: $primary-color;
+          text-transform: uppercase;
+          font-size: 1rem;
+          letter-spacing: 5px;
+          font-weight: 400;
+          margin: 30px 0 15px;
+        }
+
+        .dispo_cara {
+          border-left: 5px solid $primary-color;
+          padding-left: 50px;
+        }
+
+        .cta {
+          margin: 80px 0 !important;
+        }
+
+        a {
+          color: $primary-color;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  #disclaimer_banner {
+    padding-top: 100px;
+  }
+
+  #confiance {
+    background-color: $light !important;
+    background: $light !important;
+    padding-top: 0;
+    padding-bottom: 200px;
+  }
+
+  #section_bleue {
+    background-color: $secondary-color;
+    margin-top: 0;
+
+    .container {
+      padding-left: 20%;
+
+      .cold {
+        padding: 50px 0;
+        margin: 100px 0;
+
+        h3 {
+          color: $primary-color;
+          text-transform: uppercase;
+          font-size: 1rem;
+          letter-spacing: 5px;
+          font-weight: 400;
+          margin: 30px 0 15px;
+        }
+
+        p,
+        li {
+          color: $light;
+        }
+
+        a {
+          color: $light !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #confiance {
+    padding-bottom: 250px;
+  }
+}

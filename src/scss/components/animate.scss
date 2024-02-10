@@ -1,0 +1,93 @@
+.from-bottom,
+.from-left,
+.from-right,
+.from-top {
+  opacity: 0;
+}
+
+//FADE-IN
+
+@keyframes fade-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.fade-in-top {
+  -webkit-animation: fade-in-top 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-top 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-right {
+  -webkit-animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-bottom {
+  -webkit-animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-left {
+  -webkit-animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-out-top {
+  -webkit-animation: fade-in-top 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-top 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-direction: reverse;
+}
+
+// Loop
+
+@keyframes up-and-down {
+  0% {
+    top: 1px;
+  }
+  50% {
+    top: -1px;
+  }
+  100% {
+    top: 1px;
+  }
+}

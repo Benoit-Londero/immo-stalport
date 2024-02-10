@@ -1,0 +1,42 @@
+$primary-color: #b52b43;
+$hover: #7f1f2f;
+$hover-transparent: #b52b42d8;
+$secondary-color: #233342;
+$hover-blue: #111a22;
+$light: #fff;
+$dark: #000;
+$light-gray: #f7f8f9;
+$middle-gray: #b0b0b0;
+$dark-gray: #474955;
+$dark-dark-gray: #3e3d40;
+
+/* Mixins Dégradés */
+
+@mixin liGray-to-white {
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 248, 249, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 248, 249, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 248, 249, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f7f8f9",GradientType=1);
+}
+
+.bgBlue {
+  background-color: $secondary-color !important;
+  border: 1px solid $secondary-color;
+}
+
+.txtBlue {
+  color: $secondary-color !important;
+}

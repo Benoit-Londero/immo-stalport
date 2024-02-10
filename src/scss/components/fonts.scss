@@ -1,0 +1,83 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  font-family: "sofia-pro", sans-serif;
+  font-style: normal;
+}
+
+p,
+li {
+  text-wrap: pretty;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  text-align: justify;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+.red {
+  color: $primary-color;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.9rem;
+}

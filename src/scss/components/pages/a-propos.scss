@@ -1,0 +1,79 @@
+.page-template-apropos {
+  #assurance {
+    padding-top: 100px;
+  }
+  #statistiques {
+    padding: 400px 0 100px;
+
+    h4 {
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      color: $primary-color;
+      font-size: 1rem;
+    }
+
+    h2 {
+      margin: 70px auto;
+      font-size: 3rem;
+    }
+
+    .descr {
+      padding-left: 50%;
+      margin-bottom: 150px;
+
+      a {
+        top: 50px;
+        position: relative;
+      }
+    }
+
+    .grid_stats {
+      display: flex;
+      gap: 20px;
+
+      .block_stat {
+        width: calc((100% - 60px) / 4);
+        border-left: 2px solid $primary-color;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  #mot_president {
+    background-color: $light-gray;
+    padding-top: 50px;
+
+    .columns {
+      position: relative;
+      .col-g {
+        position: relative;
+
+        img {
+          position: absolute;
+          bottom: -250px;
+        }
+      }
+
+      .col-d {
+        padding: 0;
+
+        h3 {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .separator {
+      display: none;
+    }
+  }
+
+  #contact {
+    background-color: $light !important;
+    padding-top: 350px;
+  }
+
+  #disclaimer_banner {
+    padding-top: 150px;
+  }
+}

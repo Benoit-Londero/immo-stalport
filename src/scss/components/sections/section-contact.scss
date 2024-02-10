@@ -1,0 +1,93 @@
+#contact {
+  padding: 100px 0;
+  .container {
+    text-align: center;
+    width: 70vw;
+
+    .subtitle {
+      color: $primary-color;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: $secondary-color;
+      font-weight: 200;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.contact-form,
+.wpcf7-form {
+  li {
+    margin-left: 0 !important;
+  }
+  .moitier {
+    width: 48%;
+  }
+
+  .left {
+    float: left;
+    margin-right: 4%;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .liCheck input[type="checkbox"],
+  .liRadio input[type="radio"],
+  .liRadio input[type="checkbox"] {
+    min-width: auto !important;
+    width: auto !important;
+    max-width: auto !important;
+    border: none !important;
+    border-bottom: 1px solid #b0b0b0;
+    min-height: inherit !important;
+    background: none !important;
+  }
+
+  .liInfo {
+    a {
+      color: $secondary-color;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $primary-color;
+      top: 0px;
+      position: relative;
+      transition: all ease-out 200ms;
+
+      &:hover {
+        border-bottom: 5px solid $primary-color;
+        top: -5px;
+      }
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}
+
+#contact-content {
+  .liInfo {
+    a {
+      color: $light !important;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $primary-color;
+      top: 0px;
+      position: relative;
+      transition: all ease-out 200ms;
+
+      &:hover {
+        border-bottom: 5px solid $primary-color;
+        top: -5px;
+      }
+    }
+  }
+}

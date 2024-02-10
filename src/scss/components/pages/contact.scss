@@ -1,0 +1,149 @@
+.page-template-contact {
+  background-color: $secondary-color;
+  #contact-content {
+    background-color: transparent !important;
+    padding-top: 400px;
+
+    .container {
+      padding-bottom: 60px;
+      .colg {
+        h1 {
+          text-align: left;
+          color: $light;
+          font-size: 3rem;
+          line-height: 3.5rem;
+          font-weight: 300;
+        }
+      }
+
+      .cold {
+        padding-left: 20%;
+
+        form {
+          padding-top: 100px;
+          margin: auto;
+
+          .form_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 50px;
+            grid-row-gap: 0px;
+          }
+
+          ul {
+            list-style: none;
+
+            li {
+              margin-bottom: 20px;
+
+              input,
+              textarea,
+              select {
+                min-width: 100%;
+                width: 100%;
+                max-width: 100%;
+                border: none;
+                border-bottom: 1px solid $light;
+                min-height: 50px;
+                background: none;
+                color: $middle-gray;
+
+                &:focus {
+                  outline: 0;
+                  border-bottom: 1px solid $primary-color;
+
+                  &::placeholder {
+                    color: $dark-dark-gray;
+                  }
+                }
+
+                &::placeholder {
+                  color: $light-gray;
+                }
+              }
+
+              input[type="radio"] {
+                min-height: 10px;
+              }
+
+              input[type="submit"] {
+                min-width: auto;
+                width: 250px;
+                background-color: $primary-color !important;
+                color: $light;
+                margin: auto;
+                border: none;
+                filter: brightness(1);
+
+                &:hover {
+                  filter: brightness(0.8);
+                }
+              }
+
+              option {
+                color: $light-gray;
+              }
+            }
+
+            .liSubmit p {
+              text-align: center;
+              margin-top: 80px;
+            }
+
+            .cta-border {
+              margin-left: 30px;
+              font-size: 0.7rem;
+              padding: 5px 25px;
+            }
+
+            p {
+              color: $light;
+            }
+          }
+        }
+      }
+      h3 {
+        font-size: 0.9rem;
+        font-weight: 200;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $primary-color;
+      }
+    }
+  }
+
+  #modif {
+    background-color: $light;
+    padding: 150px;
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      font-weight: 300;
+      margin-bottom: 50px;
+    }
+
+    p,
+    ul {
+      margin-left: 20%;
+      list-style: none;
+
+      li {
+        a {
+          color: $secondary-color;
+          padding-bottom: 5px;
+          border-bottom: 1px solid $primary-color;
+          top: 0px;
+          position: relative;
+          transition: all ease-out 200ms;
+
+          &:hover {
+            border-bottom: 5px solid $primary-color;
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+}

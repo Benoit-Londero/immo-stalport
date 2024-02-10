@@ -1,0 +1,198 @@
+.header {
+  background: none;
+  position: absolute;
+  top: 40px;
+  left: 5vw;
+  width: 90vw;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+
+  .col-g {
+    width: 20%;
+
+    .logo {
+      max-width: 350px;
+    }
+  }
+
+  .col-d {
+    width: 80%;
+
+    .hamburger-menu {
+      display: none;
+    }
+
+    .secondary-navigation {
+      display: flex;
+      justify-content: flex-end;
+
+      .menu-top-header_menu-container ul,
+      .menu-top-header_menu-neerlandais-container ul {
+        display: flex;
+        list-style: none;
+
+        li + li::before {
+          content: "•";
+          color: $primary-color;
+          padding: 30px;
+        }
+
+        li {
+          text-transform: uppercase;
+          font-family: "Sofia";
+          letter-spacing: 10px;
+          font-weight: 300;
+          font-size: 0.7rem;
+
+          a {
+            display: inline !important;
+            text-shadow: 0px 0px 3px rgb(0 0 0 / 3%);
+            &:hover {
+              color: $primary-color;
+            }
+          }
+
+          &:last-child::before {
+            content: "|";
+            padding: 5px;
+          }
+        }
+        .wpml-ls-current-language {
+          a {
+            color: $primary-color;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .primary-navigation {
+    margin-top: 20px;
+
+    #menu-navigation-principale,
+    #menu-navigation-principale-neerlandais {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 50px;
+
+      li {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.9rem;
+        padding-top: 10px;
+        position: relative;
+
+        a {
+          color: $light;
+          transition: all ease-out 300ms;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .cta {
+        border-radius: 0;
+
+        &::after {
+          content: "→";
+          height: 30px;
+          color: $light;
+        }
+
+        &::before {
+          border-radius: 0 !important;
+        }
+      }
+
+      .menu-item-has-children {
+        .sub-menu {
+          display: none;
+        }
+
+        &:hover {
+          min-height: 400px;
+
+          .sub-menu {
+            display: block;
+            position: absolute;
+            background-color: $light;
+            border-bottom: 2px solid $primary-color;
+            top: 45px;
+            min-width: 300px;
+
+            li {
+              color: $primary-color;
+              list-style: none;
+              display: block;
+              border-bottom: 1px solid $light-gray;
+              position: relative;
+              max-height: 50px;
+              padding: 0;
+              margin: 0;
+
+              a {
+                color: $secondary-color;
+                text-transform: none;
+                letter-spacing: 0;
+                width: 90%;
+                display: block;
+                padding: 2% 5%;
+                margin: 0;
+              }
+
+              &:hover {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                min-height: auto;
+
+                a {
+                  color: $light;
+                }
+
+                .sub-menu {
+                  display: block;
+                }
+              }
+
+              .sub-menu {
+                display: none;
+                position: absolute;
+                right: -300px;
+                top: 0;
+
+                li {
+                  a {
+                    color: $secondary-color;
+                    text-transform: none;
+                    font-size: 0.8rem;
+                    font-weight: 300;
+
+                    &:hover {
+                      color: $light;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger-menu {
+    display: none;
+    stroke: #fff;
+  }
+}
+
+.megamenu {
+  display: none;
+  opacity: 0;
+}
