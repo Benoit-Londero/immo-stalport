@@ -78,6 +78,17 @@
   animation-direction: reverse;
 }
 
+// Parallax
+
+@keyframes parallax {
+  from{
+    top:0px;
+  }
+  to{
+    top:-50px;
+  }
+}
+
 // Loop
 
 @keyframes up-and-down {

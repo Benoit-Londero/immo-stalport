@@ -1,8 +1,6 @@
 #section-cta-contact {
   color: $light;
-  background: $light-gray;
-  padding-top: 300px;
-  height: 400px;
+  padding-top: 100px;
 
   .container {
     display: flex;
@@ -17,7 +15,7 @@
       max-width: 660px;
       max-height: 550px;
       position: relative;
-      background: $primary-color;
+      background: $secondary-color;
     }
 
     .bloc_img {
@@ -42,6 +40,10 @@
         font-size: 2rem;
         font-weight: 300;
         line-height: 2.3rem;
+
+        strong{
+          color : $primary-color;
+        }
       }
 
       p {

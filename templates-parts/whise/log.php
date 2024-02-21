@@ -1,0 +1,3 @@
+<?php 
+     $tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODE4MTc1OX0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTExNDksIm9mZmljZUlkIjoxMzc4Nn0.TwaO-54cyrLMuzTdjuXG1vHlekGaqZD9TBQtN3hIn0I');
+?>

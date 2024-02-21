@@ -13,11 +13,12 @@
     }
 
     h2 {
-      color: $secondary-color;
+      color: $primary-color;
       font-weight: 200;
 
       strong {
         font-weight: 700;
+        color:$secondary-color;
       }
     }
   }
@@ -25,9 +26,6 @@
 
 .contact-form,
 .wpcf7-form {
-  li {
-    margin-left: 0 !important;
-  }
   .moitier {
     width: 48%;
   }
@@ -41,9 +39,10 @@
     float: right;
   }
 
-  .liCheck input[type="checkbox"],
-  .liRadio input[type="radio"],
-  .liRadio input[type="checkbox"] {
+  .itemLi[type="checkbox"],
+  .itemLi[type="radio"],
+  .itemLi[type="checkbox"],
+  .itemLi{
     min-width: auto !important;
     width: auto !important;
     max-width: auto !important;
@@ -53,29 +52,13 @@
     background: none !important;
   }
 
-  .liInfo {
-    a {
-      color: $secondary-color;
-      padding-bottom: 5px;
-      border-bottom: 1px solid $primary-color;
-      top: 0px;
-      position: relative;
-      transition: all ease-out 200ms;
-
-      &:hover {
-        border-bottom: 5px solid $primary-color;
-        top: -5px;
-      }
-    }
-  }
-
   .clear {
     clear: both;
   }
 }
 
 #contact-content {
-  .liInfo {
+  .itemLi  {
     a {
       color: $light !important;
       padding-bottom: 5px;

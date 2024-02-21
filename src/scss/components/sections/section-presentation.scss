@@ -1,0 +1,42 @@
+#presentation{
+  background: $light-gray;
+  padding: 150px 0 0 0;
+  max-height: 800px;
+  
+  .main-content {
+  display: flex;
+  gap: 50px;
+
+    .col-g {
+      h2 {
+        font-weight: 300;
+        color: $primary-color;
+
+        strong {
+          font-weight: 700;
+          color: $dark-gray;
+        }
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        bottom: -200px;
+      }
+    }
+
+    .col-d {
+      padding-top: 120px;
+
+      .cta {
+        border-radius: 25px;
+        letter-spacing: 5px;
+        font-size: 0.7rem;
+        display: inline-block;
+        margin-top: 30px;
+      }
+    }
+  }
+}

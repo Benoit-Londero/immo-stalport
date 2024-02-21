@@ -1,76 +1,243 @@
 .page-template-apropos {
+  #introduction,
+  #assurance,
+  #citation{
+    background:#fff;
+  }
+
+  #introduction{
+    padding-bottom: 5vh;
+
+    .container {
+      .colg {
+        position: relative;
+        z-index: 10;
+
+        .intro {
+          margin-top: 100px;
+          h2 {
+            text-transform: uppercase;
+            color: $primary-color;
+            font-size: 1rem;
+            letter-spacing: 10px;
+            font-weight: 400;
+          }
+
+          h1 {
+            font-size: 3rem;
+            color: $secondary-color;
+            font-weight: 300;
+            line-height: 3.5rem;
+          }
+        }
+
+        &::before {
+          content: "";
+          width: 50px;
+          height: 5px;
+          display: block;
+          background: $primary-color;
+          margin-top: 0px;
+        }
+      }
+      .cold {
+        padding-left: 20%;
+        margin: 100px 0 0 0;
+
+        h2 {
+          font-size: 1rem;
+          color: $primary-color;
+          letter-spacing: 8px;
+          text-transform: uppercase;
+          font-weight: 600;
+
+          &::before {
+            content: "→";
+          }
+        }
+
+        a {
+          color: $secondary-color;
+          font-weight: 600;
+        }
+
+        .intro,
+        .par_cta {
+          &::after {
+            content: "";
+            width: 50px;
+            height: 5px;
+            display: block;
+            background: $primary-color;
+            margin-top: 50px;
+          }
+
+          ul {
+            border-left: 5px solid $primary-color;
+            padding-left: 20px;
+          }
+
+          li {
+            margin-left: 20px;
+            margin-bottom: 0;
+
+            ul {
+              border-left: none;
+              padding-left: 5px;
+            }
+          }
+          a {
+            color: $secondary-color;
+          }
+        }
+
+        .cta {
+          color: $light;
+          font-weight: 200;
+          font-size: 0.8rem;
+          margin: 30px 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  #service_cp{
+    .container{
+      width: 85vw;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0;
+
+      .colg,
+      .cold{
+        width:40vw;
+      }
+
+      .colg{
+        padding: 22vh 10vw 10vh 15vw;
+        background-color: #fff;
+
+        p{
+          margin: 80px auto;
+        }
+      }
+
+      .cold{
+        .swiper-about{
+          position: relative;
+          margin-right: 0;
+          margin-left: -10%;
+          width: 110%;
+
+          .swiper-wrapper{
+            max-height: 520px;
+
+            .swiper-slide{
+                height: 520px !important;
+                overflow: hidden;
+                img{
+                  height: 100%;
+                  width: auto !important;
+                  max-width: inherit;
+                }
+            }
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next{
+            border: 1px solid #fff;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            bottom: 20px;
+            top: auto;
+            left: auto;
+          }
+
+          .swiper-button-prev{
+            right: 60px;
+            border-right: none;
+
+            &::after{
+              content: "←";
+              color:$light;
+              font-size: 1rem;
+            }
+          }
+
+          .swiper-button-next{
+            right: 10px;
+
+            &::after{
+              content: "→";
+              color: $light;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #highlights{
+    background-color: $light-gray;
+    margin-top: -150px;
+    padding-top: 250px;
+
+    img{
+      margin:auto;
+      bottom: -150px;
+      position: relative;
+      width: 70vw;
+    }
+  }
+
+  #txt_highlights{
+    .container{
+      width: 85vw;
+      margin-right: 0;
+      margin-left: auto;
+
+      .cold{
+        padding: 15vh 15vw 10vh 10vw;
+        background-color: #fff;
+        width: 30vw;
+        margin-right: 0;
+        margin-left: auto;
+        position: relative;
+        z-index: 5;
+
+        p{
+          margin: 80px auto 0px;
+          &:last-child{
+            margin: 20px auto;
+          }
+        }
+      }
+    }
+  }
+
+  #citation{
+    padding:150px 0 50px;
+  }
+
+  #photo_separator{
+    min-height: 650px;
+    width: 100vw;
+    background-attachment: scroll;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
   #assurance {
     padding-top: 100px;
-  }
-  #statistiques {
-    padding: 400px 0 100px;
-
-    h4 {
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      color: $primary-color;
-      font-size: 1rem;
-    }
-
-    h2 {
-      margin: 70px auto;
-      font-size: 3rem;
-    }
-
-    .descr {
-      padding-left: 50%;
-      margin-bottom: 150px;
-
-      a {
-        top: 50px;
-        position: relative;
-      }
-    }
-
-    .grid_stats {
-      display: flex;
-      gap: 20px;
-
-      .block_stat {
-        width: calc((100% - 60px) / 4);
-        border-left: 2px solid $primary-color;
-        padding-left: 20px;
-      }
-    }
-  }
-
-  #mot_president {
-    background-color: $light-gray;
-    padding-top: 50px;
-
-    .columns {
-      position: relative;
-      .col-g {
-        position: relative;
-
-        img {
-          position: absolute;
-          bottom: -250px;
-        }
-      }
-
-      .col-d {
-        padding: 0;
-
-        h3 {
-          margin-top: 50px;
-        }
-      }
-    }
-
-    .separator {
-      display: none;
-    }
   }
 
   #contact {
     background-color: $light !important;
-    padding-top: 350px;
+    padding-top: 200px;
   }
 
   #disclaimer_banner {

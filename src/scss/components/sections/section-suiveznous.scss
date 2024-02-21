@@ -1,0 +1,26 @@
+#suiveznous{
+
+     .container{
+          text-align: center;
+          backdrop-filter: brightness(.5);
+          width: 80vw;
+          padding: 80px 10vw;
+
+
+          h2{
+               color:$light;
+
+               em{
+                    color:$primary-color;
+               }
+          }
+
+          ul{
+               display: flex;
+               list-style: none;
+               gap: 30px;
+               justify-content: center;
+               margin-top: 20px;
+          }
+     }
+}

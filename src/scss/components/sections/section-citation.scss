@@ -1,0 +1,19 @@
+.section_vosp {
+  text-align: center;
+  margin-bottom: 150px;
+
+  h2 {
+    color: $dark-gray;
+
+    strong {
+      font-weight: 800;
+    }
+  }
+
+  h3 {
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 1rem;
+  }
+}

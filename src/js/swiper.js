@@ -1,22 +1,30 @@
 const swiper = new Swiper(".swiper", {
   loop: true,
-  autoplay: true,
+  autoplay: false,
   cssMode: true,
 
   pagination: {
     el: ".swiper-pagination",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  }
 });
 
-const swiperResp = new Swiper(".swiper-resp", {
-  slidesPerView: "auto",
-  loop: true,
-  autoplay: true,
-  slidesPerGroup: 1,
-  cssMode: true,
-  slidesPerView: 1,
-});
+const swiper_about = new Swiper(".swiper-about", {
+  loop: false,
+  autoplay: false,
+  cssMode : true,
+  slidesPerView : 1,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+})
+
+const swiper_estate = new Swiper(".swiper-estate", {
+  spaceBetween: 10,
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+})

@@ -6,6 +6,7 @@
   width: 90vw;
   z-index: 10;
   display: flex;
+  min-height: 450px;
   justify-content: space-between;
 
   .col-g {
@@ -43,7 +44,7 @@
           font-family: "Sofia";
           letter-spacing: 10px;
           font-weight: 300;
-          font-size: 0.7rem;
+          font-size: 0.8rem;
 
           a {
             display: inline !important;
@@ -69,7 +70,6 @@
   }
 
   .primary-navigation {
-    margin-top: 20px;
 
     #menu-navigation-principale,
     #menu-navigation-principale-neerlandais {
@@ -82,8 +82,7 @@
       li {
         text-transform: uppercase;
         letter-spacing: 3px;
-        font-size: 0.9rem;
-        padding-top: 10px;
+        font-size: 1rem;
         position: relative;
 
         a {
@@ -97,7 +96,7 @@
       }
 
       .cta {
-        border-radius: 0;
+        border-radius: 30px;
 
         &::after {
           content: "→";
@@ -105,9 +104,11 @@
           color: $light;
         }
 
-        &::before {
-          border-radius: 0 !important;
-        }
+        
+      }
+
+      &::before {
+        border-radius: 30px!important;
       }
 
       .menu-item-has-children {
