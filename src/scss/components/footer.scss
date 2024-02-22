@@ -4,15 +4,14 @@ footer {
     .footer-top {
       display: flex;
       justify-content: space-around;
-      border-bottom: 1px solid $dark-gray;
+      border-bottom: 1px solid $light-gray;
       padding-top: 80px;
 
       .col {
-        width: calc((100% - 100px) / 4);
+        width: calc(100% / 3);
         padding-bottom: 50px;
         img {
-          width: 80px;
-          margin: auto;
+          width: 90%;
         }
 
         h4 {
@@ -46,6 +45,7 @@ footer {
       }
 
       .col_1 {
+        width: 20%;
         a {
           &::before {
             content: ">";
@@ -56,22 +56,28 @@ footer {
         }
       }
 
-      .col_2,
-      .col_3 {
-        border-left: 1px solid $dark-gray;
-      }
 
       .rs_footer {
-        width: 100px;
+        width: 33%;
+        color:$light;
+        border-left: 1px solid $light-gray;
+
+        p{
+          color:$light;
+        }
+
+        br{
+          display: none;
+        }
 
         a {
-          width: 30px;
-          height: 30px;
           display: block;
-          padding-top: 10px;
 
-          img {
-            width: 30px;
+          
+
+          em{
+            font-family: "sofia-pro",sans-serif;
+            color:$primary-color;
           }
         }
       }

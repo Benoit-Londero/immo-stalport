@@ -29,7 +29,9 @@
                 endif;?>
 
                 <div class="col rs_footer">
-                    <?php $socials = get_field('reseaux_sociaux','options');
+                    <?php 
+                    $socials = get_field('reseaux_sociaux','options');
+                    $adresse = get_field('adresse_footer','options');
                     
                     if(have_rows('reseaux_sociaux','options')):
                         while(have_rows('reseaux_sociaux','options')) : the_row();
@@ -39,6 +41,8 @@
                             echo '<a href="'.$url.'"><img src="'.$icone['url'].'" alt="'. $icone['name'] . '"/></a>';
                         endwhile;
                     endif;?>
+
+                    <?php echo $adresse;?>  
                 </div>
             </div>
         </div>
