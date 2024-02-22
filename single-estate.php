@@ -82,7 +82,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
   <div class="container">
     <?php if($estate):
-      echo '<h1>'.$purpose . ' de ' . $terrain . ' m2 - ' . $rooms . 'chambre<br/><strong>Faire offre àpd '.$price.'</strong></h1>';
+      echo '<h1>'.$purpose . ' de ' . $terrain . ' m2 - ' . $rooms . 'chambre<br/><strong>Faire offre àpd '.number_format($price, 0, ',', '.') . ' €</strong></h1>';
     endif;?>
   </div>
 </header>
@@ -106,7 +106,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 </section>
 
 <section id="detailsEstate">
-  <div class="container">
+  <div class="container descr_bien">
     <h2>Details</h2>
     <?php echo $estate->shortDescription[0]->content;?>
   </div>

@@ -1,6 +1,14 @@
 .section_vosp {
   text-align: center;
   margin-bottom: 150px;
+  position: relative;
+
+  img{
+    width: 240px;
+    position: absolute;
+    left: calc(50% - 120px);
+    top: -110px;
+  }
 
   h2 {
     color: $dark-gray;

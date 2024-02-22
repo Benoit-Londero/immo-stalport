@@ -9,7 +9,7 @@
      <div class="img_nl" style="background:url('<?php if($bg_nl):echo $bg_nl['url'];endif; ?>')"></div>
      <div class="container">
           <div class="colg">
-               <?php if($surtitre_nl): echo $surtitre_nl;endif;?>
+               <h3><?php if($surtitre_nl): echo $surtitre_nl;endif;?></h3>
                <?php if($titre_nl): echo $titre_nl;endif;?>
           </div>
           <div class="cold">

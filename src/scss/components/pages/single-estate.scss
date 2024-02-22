@@ -53,6 +53,13 @@
      }
 
      #detailsEstate{
+          margin-top: -250px;
+
+          .descr_bien{
+               border-bottom: 1px solid $dark-gray;
+               margin-bottom: 100px;
+          }
+
           .container{
                .accordeon-content{
                     padding: 80px 0;
@@ -217,5 +224,28 @@
      #image{
           min-height: 600px;
           background-size: cover!important;
+          position:fixed;
+     }
+
+     #newsletter{
+          padding: 80px 0;
+
+          .container{
+               h3{
+                    text-transform: uppercase;
+                    color:$middle-gray;
+                    font-size: 1rem;
+                    letter-spacing: 10px;
+                    font-weight: 200;
+               }
+
+               h2{
+                    color:$primary-color;
+
+                    strong{
+                         color: $dark-gray;
+                    }
+               }
+          }
      }
 }
