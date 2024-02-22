@@ -43,13 +43,11 @@
   .itemLi[type="radio"],
   .itemLi[type="checkbox"],
   .itemLi{
-    min-width: auto !important;
     width: auto !important;
-    max-width: auto !important;
-    border: none !important;
-    border-bottom: 1px solid #b0b0b0;
-    min-height: inherit !important;
-    background: none !important;
+    border: none;
+    border-bottom: 1px solid $light-gray;
+    min-height: 50px;
+    margin-bottom: 20px;
   }
 
   .clear {

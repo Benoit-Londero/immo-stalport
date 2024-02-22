@@ -174,12 +174,13 @@
                     left: auto;
                }
           }
-          
      }
 
      #contact-banner{
           background: $dark-gray;
           padding: 80px 0;
+          background-repeat: no-repeat!important;
+          background-size: cover!important;
       
           .container{
             display: flex;
