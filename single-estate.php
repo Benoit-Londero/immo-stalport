@@ -96,11 +96,11 @@ get_template_part( 'templates-parts/whise/log' );?>
     ?>
 
     <div class="col-g">
-      <?php if($img_1):?> <img src="<?php echo $img_1;?>" /><?php endif;?>
+      <?php if($img_1):?><a href="<?php echo $img_1;?>" data-fslightbox><img src="<?php echo $img_1;?>" /></a><?php endif;?>
     </div>
     <div class="col-d">
-      <?php if($img_2):?> <img src="<?php echo $img_2;?>" /><?php endif;?>
-      <?php if($img_3):?> <img src="<?php echo $img_3;?>" /><?php endif;?>
+      <?php if($img_2):?><a href="<?php echo $img_2;?>" data-fslightbox><img src="<?php echo $img_2;?>" /></a><?php endif;?>
+      <?php if($img_3):?><a href="<?php echo $img_3;?>" data-fslightbox><img src="<?php echo $img_3;?>" /></a><?php endif;?>
     </div>
   </div>
 </section>
@@ -112,7 +112,6 @@ get_template_part( 'templates-parts/whise/log' );?>
   </div>
   <div class="container">
       <h2>Caractéristique du bien</h2>
-
 
   <div class="accordeon-content">
     <div class="list-table">
@@ -159,14 +158,16 @@ get_template_part( 'templates-parts/whise/log' );?>
   </div>
 </section>
 
-<section id="slider-bottom from-bottom">
-  <div class="swiper swiper-estate">
-    <div class="swiper-wrapper">
-      <?php foreach($pictures as $pic):?>
-        <div class="swiper-slide">
-          <a href="<?php echo $pic->urlXXL;?>"><img src="<?php echo $pic->urlLarge;?>"/></a>
-        </div>
-      <?php endforeach; ?>
+<section id="slider-bottom" class="from-bottom">
+  <div class="container">
+    <div class="swiper swiper-estate">
+      <div class="swiper-wrapper">
+        <?php foreach($pictures as $pic):?>
+          <div class="swiper-slide">
+            <a href="<?php echo $pic->urlXXL;?>" data-fslightbox><img src="<?php echo $pic->urlLarge;?>"/></a>
+          </div>
+        <?php endforeach; ?>
+      </div>
     </div>
 
     <div class="swiper-button-next"></div>

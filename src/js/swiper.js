@@ -1,3 +1,5 @@
+require("fslightbox");
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   autoplay: false,
@@ -22,7 +24,8 @@ const swiper_about = new Swiper(".swiper-about", {
 
 const swiper_estate = new Swiper(".swiper-estate", {
   spaceBetween: 10,
-  
+  slidesPerView : 3,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
