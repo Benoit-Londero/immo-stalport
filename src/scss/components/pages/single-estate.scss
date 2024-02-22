@@ -30,9 +30,24 @@
           top:-350px;
 
           .container{
+               display: flex;
+               gap: 30px;
+               justify-content: space-between;
 
-               .swiper-wrapper{
-                    width:70%
+               .col-g,
+               .col-d{
+                    display:flex;
+                    width: 70%;
+
+                    img{
+                         object-fit: cover;
+                    }
+               }
+
+               .col-d{
+                    flex-direction: column;
+                    width: 30%;
+                    gap: 30px;
                }
           }
      }

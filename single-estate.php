@@ -3,12 +3,12 @@
 
 include 'templates-parts/whise/whise.php';
 
+$tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODQ1MzMyMn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.P_SFcDZWfAzapAWmeL5qRynvA7qrPsujaWaHP5osP_Q');
+
 if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference'] === ''){
     $front_page_id = get_option('page_on_front');
     wp_safe_redirect( get_permalink( $front_page_id ) );
 } 
-
-  $tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODQ1MzMyMn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.P_SFcDZWfAzapAWmeL5qRynvA7qrPsujaWaHP5osP_Q');
 
   $estateId = $_GET['reference'];
   $estate = getEstateById($estateId, $tokenClient, getWhiseLanguageCode());
@@ -98,7 +98,7 @@ get_template_part( 'templates-parts/whise/log' );?>
     <div class="col-g">
       <?php if($img_1):?> <img src="<?php echo $img_1;?>" /><?php endif;?>
     </div>
-    <div class="col-g">
+    <div class="col-d">
       <?php if($img_2):?> <img src="<?php echo $img_2;?>" /><?php endif;?>
       <?php if($img_3):?> <img src="<?php echo $img_3;?>" /><?php endif;?>
     </div>

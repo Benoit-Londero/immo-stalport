@@ -53,6 +53,13 @@ get_header();?>
 
 <section id="section_nosbiens">
     <div class="container">
+        <?php $titleBiens = get_field('titre_listing');
+
+        if($titleBiens):
+            echo $titleBiens;
+        endif;?>
+
+ 
         <?php /* Liste bien */ ?>
         <div class="whise-list-biens">
             <?php 
@@ -87,7 +94,7 @@ get_header();?>
                         <a href="<?php echo get_page_link( 274 ). '?reference='.$estate->id.'&prefill='.$estate->id.'&Whise='.$estate->referenceNumber; ?>" >
                             <div class="item-thumbnail">
                                 <?php if($isNew){
-                                    echo '<span class="available">'. translateString("Nouveau") .'</span>';
+                                    echo '<span class="available">'. "Nouveau" .'</span>';
                                 };?>
                                 <img src="<?php echo $estate->pictures[0]->urlLarge;?>" alt=""/>
                             </div>
@@ -107,7 +114,7 @@ get_header();?>
                                     <?php if($peb): ?><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/peb/peb_<?php echo strtolower($peb);?>.png" alt="PEB"><?php endif;?>
                                 </div>
                                 <div class="item-price">
-                                    <a href="#" class="cta-estate"><?php if($price): echo $price . ' €';endif;?></a> 
+                                    <a href="#" class="cta-estate"><?php if($price): echo number_format($estate->price, 0, ',', '.') . ' €';endif;?></a> 
                                 </div>
                             </div>
                         </a>

@@ -5,7 +5,6 @@
           margin: 0;
           padding: 0;
           text-align: center;
-     }
      
      .container{
           display: flex;
@@ -198,4 +197,5 @@
                .gray:hover::after{
                     bottom: 35px;
                }
-          }
+     }
+}

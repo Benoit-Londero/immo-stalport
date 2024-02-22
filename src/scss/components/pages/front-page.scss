@@ -424,6 +424,18 @@
   }
 
   #section_nosbiens{
+    padding-top: 500px;
+    .container{
+      h2{
+        text-align: center;
+        color: $primary-color;
+        margin: 50px auto;
+
+        strong{
+          color: $dark-gray;
+        }
+      }
+    }
     #estates{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
