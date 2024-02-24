@@ -30,5 +30,6 @@ get_template_part( 'templates-parts/header-nav');?>
     <div class="container container-form">
         <?php echo do_shortcode( $form );?>
 </div>
+</section>
 
 <?php get_footer();
