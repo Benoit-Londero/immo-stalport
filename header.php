@@ -28,7 +28,7 @@
         </svg>
     </div>
 
-    <div class="cta estimation">
+    <div class="cta cta-estimation">
         <?php 
             $legende = get_field('legende','options');
             $liens_es = get_field('liens_estim','options');

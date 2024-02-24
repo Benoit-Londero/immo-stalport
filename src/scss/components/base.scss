@@ -314,3 +314,16 @@ form {
     }
   }
 }
+
+
+.cta-estimation{
+  position: fixed;
+  right: -100px;
+  left: auto;
+  top: 50%;
+  z-index: 100;
+  transform: rotateZ(270deg);
+  border-radius: 20px 20px 0px 0;
+  font-size: .8rem;
+  margin: 0;
+}
