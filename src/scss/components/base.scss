@@ -328,3 +328,12 @@ form {
     margin: 0;
     font-weight: 500;
 }
+
+#photo_separator{
+  min-height: 650px;
+  width: 100vw;
+  background-attachment: scroll;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
