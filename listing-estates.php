@@ -32,16 +32,6 @@ get_template_part( 'templates-parts/header-nav');?>
     </div>
 </section>
 
-<section id="highlights">
-    <?php
-        $titreMea = get_field('titre-mea');
-        $texteMea = get_field('texte-mea');
-        $imgMea = get_field('image-mea');
-    ?>
-
-    <img src="<?php if($imgMea): echo $imgMea['url'] ;endif;?>" alt=""/>
-</section>
-
 <?php get_template_part( 'templates-parts/section-estimation' );?>
 
 <?php $parallax = get_field('image');

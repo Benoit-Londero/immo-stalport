@@ -59,8 +59,6 @@ get_header();?>
             echo $titleBiens;
         endif;?>
 
-        
- 
         <?php /* Liste bien */ ?>
         <div class="whise-list-biens">
             <?php 
