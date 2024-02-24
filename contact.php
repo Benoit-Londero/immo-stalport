@@ -28,4 +28,6 @@ get_template_part( 'templates-parts/header-nav');?>
     </div>
 </section>
 
+<?php get_template_part('templates-parts/contact');?>
+
 <?php get_footer();
