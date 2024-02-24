@@ -108,7 +108,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 <section id="detailsEstate">
   <div class="container descr_bien">
     <h2>Details</h2>
-    <?php echo $estate->shortDescription[0]->content;?>
+    <p><?php echo $estate->shortDescription[0]->content;?></p>
   </div>
   <div class="container">
       <h2>Caractéristique du bien</h2>

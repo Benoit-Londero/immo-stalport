@@ -196,7 +196,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   //The data you want to send via POST
   $fieldsArray = array(
     'Page' => array(
-      'Limit' => 15,
+      'Limit' => 9,
       'Offset' => $page
     ),
     'Filter' => array(
