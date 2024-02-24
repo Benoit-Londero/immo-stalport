@@ -34,7 +34,7 @@ get_template_part( 'templates-parts/header-nav');?>
 
 <?php get_template_part( 'templates-parts/section-cta-contact' );?>
 
-<?php $parallax = get_field('image');
+<?php $parallax = get_field('image_parallax');
 
 if($parallax):?>
     <section id="photo_separator" style="background-image: url('<?php echo $parallax['url'];?>');"></section>
