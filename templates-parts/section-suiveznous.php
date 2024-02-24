@@ -14,5 +14,6 @@
                          <li><a href="<?php echo $cta_rs['url'];?>" class="cta-blue"><?php echo $cta_rs['title'];?></a></li>
                <?php endwhile;
                endif;?>
+          </ul>
      </div>
 </section>
