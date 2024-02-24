@@ -101,8 +101,11 @@ get_template_part( 'templates-parts/header-nav');?>
     <?php get_template_part( 'templates-parts/section-citation' );?>
 </section>
 
-<?php $parallax = get_field('image');?>
-<section id="photo_separator" style="background-image: url('<?php if($parallax): echo $parallax['link'];endif;?>');"></section>
+<?php $parallax = get_field('image');
+
+if($parallax):?>
+    <section id="photo_separator" style="background-image: url('<?php echo $parallax['url'];?>');"></section>
+<?php endif;?>
 
 <?php get_template_part( 'templates-parts/contact' );?>
 
