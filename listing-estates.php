@@ -32,7 +32,7 @@ get_template_part( 'templates-parts/header-nav');?>
     </div>
 </section>
 
-<?php get_template_part( 'templates-parts/section-estimation' );?>
+<?php get_template_part( 'templates-parts/section-cta-contact' );?>
 
 <?php $parallax = get_field('image');
 
@@ -41,7 +41,5 @@ if($parallax):?>
 <?php endif;?>
 
 <?php get_template_part( 'templates-parts/section-newsletter' );?>
-<?php get_template_part( 'templates-parts/contact' );?>
-
 <?php get_footer();?>
 
