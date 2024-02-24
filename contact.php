@@ -22,9 +22,9 @@ get_template_part( 'templates-parts/header-nav');?>
         $form = get_field('formulaire');
         $bg_header = get_field('bg_header');
     ?>
-    <?php if($title):?><?php echo $title;?><?php endif;?>
+    <?php if($titre):?><?php echo $titre;?><?php endif;?>
     <span class="separator"></span>
-    <?php if($descr_Ctt):?><?php echo $descr_Ctt;?><?php endif;?>
+    <?php if($intro):?><?php echo $intro;?><?php endif;?>
 
     </div>
     <div class="container container-form">
