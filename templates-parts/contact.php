@@ -9,9 +9,11 @@
         ?>
         <?php if($subtitle):?><p class="subtitle"><?php echo $subtitle;?></p><?php endif;?>
         <?php if($title):?><?php echo $title;?><?php endif;?>
-        
+        <span class="separator"></span>
         <?php if($descr_Ctt):?><?php echo $descr_Ctt;?><?php endif;?>
 
+    </div>
+    <div class="container container-form">
         <?php echo do_shortcode( $form );?>
     </div>
 </section>

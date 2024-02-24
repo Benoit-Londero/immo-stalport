@@ -4,12 +4,26 @@
     text-align: center;
     width: 70vw;
 
+    .cta{
+      margin: auto;
+      text-align: center;
+      display: block;
+      border: none;
+    }
+
     .subtitle {
       color: $primary-color;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 5px;
       font-weight: 500;
+    }
+
+    .separator{
+      width: 10px;
+      height: 10px;
+      display: block;
+      margin-top: 50px;
     }
 
     h2 {
@@ -19,6 +33,62 @@
       strong {
         font-weight: 700;
         color:$secondary-color;
+      }
+    }
+
+    .select{
+      p{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $middle-gray;
+
+        .itemLi{
+          background:none;
+          min-height: 30px;
+        }
+      }
+    }
+
+    textarea{
+      background:none;
+      border-bottom: 1px solid $middle-gray;
+      min-width: 100%;
+      max-width: 100%;
+
+        &:active,
+        &:focus{
+          border-bottom: 1px solid $primary-color;
+          outline: none;
+          background: none;
+        }
+    }
+  }
+    
+
+  .container-form{
+    .columns{
+      display:flex;
+      gap: 50px;
+      justify-content: space-between;
+
+      .colg,
+      .cold{
+        width: 50%;
+
+        input{
+          background: none;
+          border-bottom: 1px solid $middle-gray;
+          transition: border ease-in 300ms;
+          width: 100%;
+
+          &:active,
+          &:focus{
+            border-bottom: 1px solid $primary-color;
+            outline: none;
+            background: none;
+          }
+
+        }
       }
     }
   }
@@ -43,7 +113,6 @@
   .itemLi[type="radio"],
   .itemLi[type="checkbox"],
   .itemLi{
-    width: auto !important;
     border: none;
     border-bottom: 1px solid $light-gray;
     min-height: 50px;
