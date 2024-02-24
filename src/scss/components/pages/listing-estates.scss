@@ -384,6 +384,20 @@
                          margin: 0;
                     }
                }
+
+               #section-cta-contact{
+                    .bloc_img{
+                         top:350px;
+                    }
+
+                    .content_section-cta{
+                         background: $dark-gray;
+
+                         .cta{
+                              background: $secondary-color;
+                         }
+                    }
+               }
           }
      }       
 }
