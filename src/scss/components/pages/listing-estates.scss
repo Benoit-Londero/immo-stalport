@@ -388,7 +388,7 @@
      }
 
      #section-cta-contact{
-          padding-bottom: 400px;
+          padding-bottom: 250px;
 
           .container{
                .bloc_img{
@@ -412,6 +412,37 @@
                     }
                }
           }
-     } 
+     }
+     
+     .oblic-line{
+          min-height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: -60px;
+          margin-left: 100px;
+     }
+
+     #newsletter{
+          padding: 80px 0;
+
+          .container{
+               h3{
+                    text-transform: uppercase;
+                    color:$middle-gray;
+                    font-size: 1rem;
+                    letter-spacing: 10px;
+                    font-weight: 200;
+               }
+
+               h2{
+                    color:$primary-color;
+
+                    strong{
+                         color: $dark-gray;
+                    }
+               }
+          }
+     }
 }
 
