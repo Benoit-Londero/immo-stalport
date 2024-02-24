@@ -17,8 +17,8 @@ get_template_part( 'templates-parts/header-nav');?>
 <section id="contact">
     <div class="container from-bottom">
     <?php
-        $titre = get_field('titre');
-        $intro = get_field('intro');
+        $titre = get_field('titreContact');
+        $intro = get_field('introContact');
         $form = get_field('formulaire');
         $bg_header = get_field('bg_header');
     ?>
