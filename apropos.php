@@ -94,7 +94,6 @@ get_template_part( 'templates-parts/header-nav');?>
             <?php if($texteMea): echo $texteMea; endif;?>
         </div>
     </div>
-    
 </section>
 
 <section id="citation">
