@@ -73,7 +73,8 @@ function getListEstateHome($token,$lang = 'fr-BE'){
   //The data you want to send via POST
   $fieldsArray = array(
     'Page' => array(
-      'Limit' => 6
+      'Limit' => 6,
+      'Offset' => 11
     )
     );
   $fields = json_encode( $fieldsArray );
@@ -109,15 +110,16 @@ function getListEstate($token, $lang = 'fr-BE'){
   if($lang == 'nl-NL'){
     $langCode = 'nl';
   }
-  if(is_page(18) || is_page(29580)){
+  if(is_page(215)){
     $purpose[] = 1;
     $purpose[] = 3;
     $listType = array(1);
-  }else if(is_page(20) || is_page(29583)){
+  }else if(is_page(213)){
     $purpose[] = 2;
   }
+
   if(!empty($_GET['reference'])){
-    $toRedirect = get_bloginfo('url') . '/estate-' . $langCode . '/?reference=' . $_GET['reference'];
+    $toRedirect = get_bloginfo('url') . '/?reference=' . $_GET['reference'];
     wp_safe_redirect( $toRedirect );
   }
 
@@ -132,7 +134,6 @@ function getListEstate($token, $lang = 'fr-BE'){
       $investmentEstate = true;
   } 
 
-  
   if(!empty($_GET['type'])){
     foreach( $_GET['type'] as $typ):
       if($typ == "9999"){
@@ -155,9 +156,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   }
   $prixMinimum = 0;
   $prixMaximum = 99999999;
-  if(!empty($_GET['prixMinimum'])){
-    $prixMinimum = intval($_GET['prixMinimum']);
-  }
+
   if(!empty($_GET['prixMaximum'])){
     $prixMaximum = intval($_GET['prixMaximum']);
   }
@@ -197,7 +196,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   //The data you want to send via POST
   $fieldsArray = array(
     'Page' => array(
-      'Limit' => 6,
+      'Limit' => 15,
       'Offset' => $page
     ),
     'Filter' => array(
@@ -209,7 +208,7 @@ function getListEstate($token, $lang = 'fr-BE'){
       'Rooms' => $nbrChambre,
       'PriceRange' => array(
         'Max' => $prixMaximum,
-        'Min' => $prixMinimum,
+        'Min' => 0  ,
       ),
       'investmentEstate' => $investmentEstate
     ),
