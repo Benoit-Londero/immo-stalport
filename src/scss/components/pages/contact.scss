@@ -1,12 +1,12 @@
 .page-template-contact {
   #contact {
-    padding-top: 400px;
+    padding-top: 150px;
 
     .container {
       padding-bottom: 60px;
 
       h1 {
-        text-align: left;
+        text-align: center;
         color: $light;
         font-size: 3rem;
         line-height: 3.5rem;
@@ -17,6 +17,10 @@
           font-weight: 700;
           color:$secondary-color;
         }
+      }
+
+      p{
+        margin-top: 50px;
       }
     } 
   }
