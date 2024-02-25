@@ -3,7 +3,7 @@
 include 'templates-parts/whise/whise.php';
 get_template_part( 'templates-parts/whise/log.php' );
 
-$tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODc2Nzk0MX0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.Jz5Yev5Fo5qbv6fKKWFj8cXzb0xhYkI92zZjYI4PTLE');
+$tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODg5MTE2Nn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.HV20SItaD7PrgcIvWXg4uRpv_Yfo77O_lDDht5BxL3Q');
 $estatesRequest = getListEstateHome($tokenClient, getWhiseLanguageCode());
 
 $estates = 0;
