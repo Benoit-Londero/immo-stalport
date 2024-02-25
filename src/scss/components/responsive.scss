@@ -26,7 +26,7 @@
 /* CSS Mobile */
 @media screen and (max-width: 768px) {
   .cta-estimation{
-    right:-20px;
+    right:-100px;
   }
 
   .container {
@@ -760,6 +760,17 @@
   //Page-estate
 
   .page-template-single-estate{
+    #header{
+      .container{
+        h1{
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          top: 200px;
+          bottom:auto;
+        }
+      }
+    }
+
     #slider-home{
       top: -50px;
       
@@ -811,7 +822,7 @@
     }
 
     #newsletter{
-      
+
     }
   }
 
