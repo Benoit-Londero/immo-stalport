@@ -55,6 +55,8 @@ get_template_part( 'templates-parts/header-nav');?>
                 </div>
             </a><?php
                 endwhile;
+            else : 
+                echo '<p>Aucune actualités</p>';
             endif;
             
             wp_reset_postdata();?>
