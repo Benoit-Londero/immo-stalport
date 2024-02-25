@@ -340,3 +340,10 @@ form {
   background-position: center !important;
   background-size: cover !important;
 }
+
+.select_localite{
+  width: 100%;
+  &::placeholder{
+    text-transform: uppercase;
+  }
+}
