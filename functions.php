@@ -116,7 +116,7 @@ add_action('wpcf7_mail_sent', 'your_wpcf7_function');
 function your_wpcf7_function($contact_form)
 {
     $titleArray = array('Contact','S\'inscrire');
-    $tokenClient = getClientTokenFunction('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODQ1MzMyMn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.P_SFcDZWfAzapAWmeL5qRynvA7qrPsujaWaHP5osP_Q');
+    $tokenClient = getClientTokenFunction('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODg5MTE2Nn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.HV20SItaD7PrgcIvWXg4uRpv_Yfo77O_lDDht5BxL3Q');
 
     $title = $contact_form->title;
     $lang = get_bloginfo('language');

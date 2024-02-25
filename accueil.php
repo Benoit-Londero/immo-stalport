@@ -57,7 +57,7 @@ get_header();?>
         <?php
         
         $titleBiens = get_field('titre_listing');
-
+        
         if($titleBiens): echo $titleBiens; endif;?>
 
         <?php /* Liste bien */ ?>
@@ -85,6 +85,29 @@ get_header();?>
                         $iconGround = get_field('icone_ground','options');
                         $iconRooms = get_field('icone_rooms','options');
 
+                        $type=  '';
+
+                        switch($estate->category){
+                            case 1:
+                                $type = 'Maison';
+                                break;
+                            case 2:
+                                $type = 'Appartement';
+                                break;
+                            case 3:
+                                $type = 'Maison';
+                                break;
+                            case 4:
+                                $type = 'Commerce';
+                                break;
+                            case 5:
+                                $type = 'Batiment industriel';
+                                break;
+                            case 6:
+                                $type = 'Garage / Parking';
+                                break;
+                        }
+
                         switch($status){
                             case 1 : 
                                 $statusName = 'A vendre';
@@ -106,7 +129,7 @@ get_header();?>
                             
                             <div class="item-content">
                                 <div class="item-title">
-                                    <?php echo '<p><strong>'.$estate->name.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
+                                    <?php echo '<p><strong>'.$type.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
                                 </div>
                                 <div class="item-detail">
                                     <ul>

@@ -5,7 +5,7 @@ include 'whise.php';
 $tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODg5MTE2Nn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.HV20SItaD7PrgcIvWXg4uRpv_Yfo77O_lDDht5BxL3Q');
 $estatesRequest = getListEstate($tokenClient, getWhiseLanguageCode());
 
-$estates = 0;
+$estates = array();
 if(isset($estatesRequest->estates)){
   $estates = $estatesRequest->estates;
   $estateCount = $estatesRequest->totalCount;
@@ -13,7 +13,7 @@ if(isset($estatesRequest->estates)){
 
 $investmentEstate = false;
 
-foreach ($estates as $estate):
+foreach($estates as $estate):
   if($estate->investmentEstate):
     $investmentEstate = true;
   endif;
@@ -224,7 +224,7 @@ $iconRooms = get_field('icone_rooms','options');
 </div>
 <?php } else { ?>
 <div class="no-estate">
-    <?php the_field('no-estate','option'); ?>
+    <?php echo get_field('no-estate','option'); ?>
 </div>
 <?php } ?>
 

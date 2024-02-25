@@ -18,12 +18,19 @@
         }
       }
 
-      img {
-        position: relative;
-        width: 100%;
-        position: relative;
-        z-index: 1;
+      
+      .ctt_img{
+        max-height: 600px;
+        overflow: hidden;
         bottom: -200px;
+        position: relative;
+
+
+        img {
+          width: 100%;
+          z-index: 1;
+          object-fit: cover;
+        }
       }
     }
 
