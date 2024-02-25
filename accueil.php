@@ -36,7 +36,8 @@ get_header();?>
                 <div class="content">
                     <p class="baseline"><?php echo get_sub_field('sous-titre');?></p>
                     <?php echo get_sub_field('titre');?>
-                    <a href="#" class="cta">NOS SOLUTIONS</a>
+                    <?php $cta = get_sub_field('liens');?> 
+                    <a href="<?php echo $scta['url'];?>" class="cta"><?php echo $cta['title'];?></a>
                 </div>
             </div>
             <?php endif;?>
