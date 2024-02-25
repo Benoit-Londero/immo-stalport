@@ -78,6 +78,8 @@
     transform: translateX(100vw);
     transition: all ease-in 300ms;
     position: fixed;
+    top:0;
+    left: 0;
     z-index: 15;
     display: block;
     overflow: hidden;
