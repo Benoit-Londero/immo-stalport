@@ -339,7 +339,7 @@ function getListRefEstate($token){
       'Offset' => $page
     ),
     'Filter' => array(
-      'DisplayStatusIds' => array(4),
+      'DisplayStatusIds' => array(3,4),
       'LanguageId' => getWhiseLanguageCode(),
     ),
     'Sort' => array(
