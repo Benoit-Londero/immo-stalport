@@ -6,7 +6,7 @@
           $form_nl = get_field('form_newsletter','options');
      ?>
 
-     <div class="img_nl" style="background:url('<?php if($bg_nl):echo $bg_nl['url'];endif; ?>')"></div>
+     <div class="img_nl" style="background:url('<?php if($bg_nl):echo $bg_nl['url'];endif; ?>');"></div>
      <div class="container">
           <div class="colg">
                <h3><?php if($surtitre_nl): echo $surtitre_nl;endif;?></h3>
