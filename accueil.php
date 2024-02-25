@@ -63,7 +63,9 @@ get_header();?>
         <div class="whise-list-biens">
             <?php 
 
-      
+            if(!$args['data']['no-filter']){
+                get_template_part('./templates-parts/whise/filters', 'filter', array('type' => $categoryList, 'investmentEstate' => $investmentEstate ));
+            }
             if(isset($estates)):
                 $i = 0;?>
                 <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
