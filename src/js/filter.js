@@ -2,7 +2,6 @@ $(document).ready(function() {
      $('.select_2_localites').select2({
           placeholder : 'Localités',
           allowClear : true,
-          selectOnClose : true
      });
 
      $(".select-custom-lib").click(function (event) {
