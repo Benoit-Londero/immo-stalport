@@ -13,7 +13,7 @@
                <?php if($titre_nl): echo $titre_nl;endif;?>
           </div>
           <div class="cold">
-               <?php if($form_nl): echo $form_nl;endif;?>
+               <?php if($form_nl): echo do_shortcode($form_nl);endif;?>
           </div>
      </div>
 </section>
