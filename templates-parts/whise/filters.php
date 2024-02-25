@@ -126,7 +126,7 @@
   </div>
 </form>
 
-<?php if(!is_front_page() || !is_page(289)):?>
+<?php if(!is_front_page() && !is_page(289)):?>
   <div class="container-result">
     <div class="container-result">
       <div class="result">
