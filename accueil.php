@@ -18,6 +18,60 @@ $categoryList = getAllTypeBien($listDetails->purposeAndCategory);
 $subCategoryList = getSubCategory();
 
 $baseurl = basename($_SERVER['REQUEST_URI']);
+
+
+$filters = false;
+
+$listType = array();
+if(!empty($_GET['type'])){
+  $listType = $_GET['type'];
+  $filters = true;
+}
+$nbrChambre = 0;
+if(!empty($_GET['chambre'])){
+  $nbrChambre = $_GET['chambre'];
+  $filters = true;
+}
+$getRegion = array();
+if(!empty($_GET['region'])){
+  $getRegion = $_GET['region'];
+  $filters = true;
+}
+$getLocalite = array();
+if(!empty($_GET['localite'])){
+  $getLocalite = $_GET['localite'];
+  $filters = true;
+}
+$prixMinimum = 0;
+$prixMaximum = 99999999;
+if(!empty($_GET['prixMinimum'])){
+  $prixMinimum = $_GET['prixMinimum'];
+  $filters = true;
+}
+if(!empty($_GET['prixMaximum'])){
+  $prixMaximum = $_GET['prixMaximum'];
+  $filters = true;
+}
+if(!empty($_GET['investmentEstate'])){
+  $investmentEstate = $_GET['investmentEstate'];
+  $filters = true;
+}
+
+$fullType = $args['type'];
+
+$addRapHouse = array_push($fullType,array(
+  'id' => '9999',
+  'name' => 'maison de rapport'
+));
+
+usort($fullType, function($a, $b) {
+  return strcmp($a['name'], $b['name']);
+});
+
+$investmentEstate = $args['investmentEstate'];
+
+$listRegions = getRegionsIds($tokenClient);
+$listLocalite = getLocalite($tokenClient);
  
 get_header();?>
 
@@ -57,7 +111,7 @@ get_header();?>
         <?php
         
         $titleBiens = get_field('titre_listing');
-        
+
         if($titleBiens): echo $titleBiens; endif;?>
 
         <?php /* Liste bien */ ?>
