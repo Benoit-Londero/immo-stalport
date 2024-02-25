@@ -132,7 +132,7 @@ get_header();?>
         </form>
 
         <?php 
-            if($estates != 0):
+            if($estates && $estates != 0):
                 $i = 0;?>
                 <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
                     <?php foreach($estates as $estate): 

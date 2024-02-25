@@ -74,7 +74,6 @@ function getListEstateHome($token,$lang = 'fr-BE'){
   $fieldsArray = array(
     'Page' => array(
       'Limit' => 6,
-      'Offset' => 11
     )
     );
   $fields = json_encode( $fieldsArray );
