@@ -25,19 +25,12 @@
 
           h1 {
             font-size: 3rem;
-            color: $secondary-color;
+            font-family: 'Sofia-pro',sans-serif;
+            color: $dark-gray;
             font-weight: 300;
             line-height: 3.5rem;
-          }
-        }
 
-        &::before {
-          content: "";
-          width: 50px;
-          height: 5px;
-          display: block;
-          background: $primary-color;
-          margin-top: 0px;
+          }
         }
       }
       .cold {
@@ -63,14 +56,6 @@
 
         .intro,
         .par_cta {
-          &::after {
-            content: "";
-            width: 50px;
-            height: 5px;
-            display: block;
-            background: $primary-color;
-            margin-top: 50px;
-          }
 
           ul {
             border-left: 5px solid $primary-color;
@@ -230,6 +215,10 @@
   #contact {
     background-color: $light !important;
     padding-top: 200px;
+
+    .cta{
+      background-color: $secondary-color;
+    }
   }
 
   #disclaimer_banner {
