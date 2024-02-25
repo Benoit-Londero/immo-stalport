@@ -51,6 +51,60 @@ get_header();?>
 
 <?php get_template_part( 'templates-parts/section-assurance' );?>
 
+<section id="section_nosbiens">
+    <div class="container">
+        <?php
+        
+        $titleBiens = get_field('titre_listing');
+
+        if($titleBiens): echo $titleBiens; endif;?>
+
+        <?php /* Liste bien */ ?>
+        <div class="whise-list-biens">
+            <?php 
+
+            if(!$args['data']['no-filter']){
+                get_template_part('./templates-parts/whise/filters', 'filter', array('type' => $categoryList, 'investmentEstate' => $investmentEstate ));
+            }
+            if(isset($estates)):
+                $i = 0;?>
+                <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
+                    <?php foreach($estates as $estate): 
+                        $status = $estate->status->id;
+                        $statusName = '';
+
+                        $chambres = $estate->rooms;
+                        $terrain = $estate->groundArea;
+                        $surface = $estate->area;
+                        $price = $estate->price;
+                        $peb = $estate->energyClass;
+                        $isNew = caclulateIsNew($estate->createDateTime);
+                        $iconArea = get_field('icone_area','options');
+                        $iconGround = get_field('icone_ground','options');
+                        $iconRooms = get_field('icone_rooms','options');
+
+                        switch($status){
+                            case 1 : 
+                                $statusName = 'A vendre';
+                                break;
+                            case 2 : 
+                                $statusName = 'À louer';
+                                break;
+                            case 3:
+                                $statusName = 'Vendu';
+                        }?>
+                    <?php
+                    $i++;
+                    endforeach;
+                ?></ul><?php
+            endif;?>
+        </div>
+    <?php
+        get_template_part( 'templates-parts/line-separator' );
+        get_template_part( 'templates-parts/section-citation' );
+        get_template_part( 'templates-parts/line-separator' );?>
+    </div>
+</section>
 
 <?php 
 get_template_part( 'templates-parts/section-cta-contact' );
