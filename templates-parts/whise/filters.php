@@ -126,7 +126,6 @@
   </div>
 </form>
 
-<?php if(!is_front_page() || !is_page(289)):?>
   <div class="container-result">
     <div class="container-result">
       <div class="result">
@@ -230,5 +229,4 @@
         window.location.href = currentURL.href;
       }
     </script>
-<?php endif;?>
 </div>
