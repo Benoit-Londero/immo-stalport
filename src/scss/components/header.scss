@@ -54,6 +54,10 @@
             }
           }
         }
+
+        .current-menu-item{
+          border-bottom:  2px solid $primary-color;
+        }
       }
     }
   }

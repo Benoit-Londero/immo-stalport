@@ -85,6 +85,12 @@ $iconRooms = get_field('icone_rooms','options');
         <li class="from-bottom whise-list-item item-estate <?php echo $i != 1 && $i != 4 ? '' : '-center';?>">
           <?php
             switch($estate->purposeStatus->id){
+              case 1:
+                $availableType = 'À vendre';
+                break;
+              case 2:
+                $availableType = 'À Louer';
+                break;
               case 3:
                 $isAvailable = false;
                 $availableType = 'Vendu';
@@ -98,6 +104,28 @@ $iconRooms = get_field('icone_rooms','options');
                   break;
               case 6:
                 $availableType = 'Option';
+                break;
+            }
+
+            $type=  '';
+            switch($estate->category){
+              case 1:
+                $type = 'Maison';
+                break;
+              case 2:
+                $type = 'Appartement';
+                break;
+              case 3:
+                $type = 'Maison';
+                break;
+              case 4:
+                $type = 'Commerce';
+                break;
+              case 5:
+                $type = 'Batiment industriel';
+                break;
+              case 6:
+                $type = 'Garage / Parking';
                 break;
             }
            
@@ -131,7 +159,7 @@ $iconRooms = get_field('icone_rooms','options');
 
                 <div class="item-content">
                   <div class="item-title">
-                    <?php echo '<p><strong>'.$estate->name.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
+                    <?php echo '<p><strong>'.$type.'</strong> - '. $availableType . ' - <strong>'.$estate->city.'</strong></p>';?>
                   </div>
                     
                   <div class="item-detail">
