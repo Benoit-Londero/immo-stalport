@@ -327,8 +327,8 @@ form {
     margin: 0;
     font-weight: 500;
 
-    &:hover{
-      border-radius: 50px 60px 0px 0;
+    &:hover::before{
+      border-radius: 50px 60px 0px 0 !important;
     }
 }
 
