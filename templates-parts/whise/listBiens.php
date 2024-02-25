@@ -224,7 +224,7 @@ $iconRooms = get_field('icone_rooms','options');
 </div>
 <?php } else { ?>
 <div class="no-estate">
-    <?php echo get_field('no-estate','option'); ?>
+    <?php echo get_field('no-estate','options'); ?>
 </div>
 <?php } ?>
 

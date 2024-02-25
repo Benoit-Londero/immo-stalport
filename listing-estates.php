@@ -33,7 +33,10 @@ get_template_part( 'templates-parts/header-nav');?>
 </section>
 
 <?php get_template_part( 'templates-parts/section-cta-contact' );?>
-<?php get_template_part( 'templates-parts/line-separator' );?>
+<?php
+        get_template_part( 'templates-parts/line-separator' );
+        get_template_part( 'templates-parts/section-citation' );
+        get_template_part( 'templates-parts/line-separator' );?>
 
 <?php $parallax = get_field('image_parallax');
 
