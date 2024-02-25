@@ -347,3 +347,23 @@ form {
     text-transform: uppercase;
   }
 }
+
+
+.submit_nl{
+  p{
+    display: flex;
+    justify-content: flex-end;
+
+    input[type="email"]{
+      height: 47px;
+      border-radius: 0;
+      border: 1px solid #bbb;
+      border-right: none;
+    }
+
+    .cta{
+      border: none;
+      border-radius: 0;
+    }
+  }
+}
