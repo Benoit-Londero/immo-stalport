@@ -63,9 +63,7 @@ get_header();?>
         <div class="whise-list-biens">
             <?php 
 
-            if(!$args['data']['no-filter']){
-                get_template_part('./templates-parts/whise/filters', 'filter', array('type' => $categoryList, 'investmentEstate' => $investmentEstate ));
-            }
+      
             if(isset($estates)):
                 $i = 0;?>
                 <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
@@ -93,7 +91,35 @@ get_header();?>
                             case 3:
                                 $statusName = 'Vendu';
                         }?>
-                    <?php
+                    <li class="item-estate <?php echo $i != 1 && $i != 4 ? '' : '-center';?>">
+                        <a href="<?php echo get_page_link( 274 ). '?reference='.$estate->id.'&prefill='.$estate->id.'&Whise='.$estate->referenceNumber; ?>" >
+                            <div class="item-thumbnail">
+                                <?php if($isNew){
+                                    echo '<span class="available">'. "Nouveau" .'</span>';
+                                };?>
+                                <img src="<?php echo $estate->pictures[0]->urlLarge;?>" alt=""/>
+                            </div>
+                            
+                            <div class="item-content">
+                                <div class="item-title">
+                                    <?php echo '<p><strong>'.$estate->name.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
+                                </div>
+                                <div class="item-detail">
+                                    <ul>
+                                        <?php if($chambres): echo '<li><img src="'.$iconRooms['url'].'" alt=""/><p>'.$chambres.'</p></li>'; endif;?>
+                                        <?php if($terrain): echo '<li><img src="'.$iconGround['url'].'" alt=""/><p>'.$terrain.'</p></li>'; endif;?>
+                                        <?php if($surface): echo '<li><img src="'.$iconArea['url'].'" alt=""/><p>'.$surface.'</p></li>'; endif;?>
+                                    </ul>
+                                </div>
+                                <div class="item-peb">
+                                    <?php if($peb): ?><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/peb/peb_<?php echo strtolower($peb);?>.png" alt="PEB"><?php endif;?>
+                                </div>
+                                <div class="item-price">
+                                    <a href="#" class="cta-estate"><?php if($price): echo number_format($estate->price, 0, ',', '.') . ' €';endif;?></a> 
+                                </div>
+                            </div>
+                        </a>
+                    </li><?php
                     $i++;
                     endforeach;
                 ?></ul><?php
