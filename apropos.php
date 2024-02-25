@@ -82,9 +82,25 @@ get_template_part( 'templates-parts/header-nav');?>
         $titreMea = get_field('titre-mea');
         $texteMea = get_field('texte-mea');
         $imgMea = get_field('image-mea');
+        $galMea = get_field('galerie-mea');
     ?>
 
-    <img src="<?php if($imgMea): echo $imgMea['url'] ;endif;?>" alt=""/>
+    <div class="container">
+        <div class="swiper swiper-mea">
+            <div class="swiper-wrapper">
+                <?php if($galMea):
+                    foreach($galMea as $gM):?>
+                        <div class="swiper-slide">
+                            <img src="<?php echo $gM['url'];?>" alt="<?php echo $gM['title'];?>"/>
+                        </div>
+                    <?php endforeach;
+                endif;?>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
 </section>
 
 <section id="txt_highlights">

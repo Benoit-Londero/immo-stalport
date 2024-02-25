@@ -173,13 +173,63 @@
   #highlights{
     background-color: $light-gray;
     margin-top: -150px;
-    padding-top: 250px;
+    padding-top: 200px;
 
-    img{
-      margin:auto;
-      bottom: -150px;
+    .swiper-mea{
       position: relative;
-      width: 70vw;
+      margin-right: 0;
+      margin-left: -10%;
+      width: 110%;
+      bottom: -150px;
+
+      .swiper-wrapper{
+        max-height: 650px;
+
+        .swiper-slide{
+            height: 650px !important;
+            overflow: hidden;
+            
+            img{
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              max-width: inherit;
+
+            }
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next{
+        border: 1px solid #fff;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        bottom: 20px;
+        top: auto;
+        right:auto;
+      }
+
+      .swiper-button-prev{
+        left: 10px;
+        border-right: none;
+
+        &::after{
+          content: "←";
+          color:$light;
+          font-size: 1rem;
+        }
+      }
+
+      .swiper-button-next{
+        left: 60px;
+
+        &::after{
+          content: "→";
+          color: $light;
+          font-size: 1rem;
+        }
+      }
     }
   }
 
