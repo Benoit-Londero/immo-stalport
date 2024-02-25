@@ -21,6 +21,14 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
 $investmentEstate = $args['investmentEstate'];
 $listLocalite = getLocalite($tokenClient);
+
+$listType = array();
+$fullType = $categoryList;
+
+$addRapHouse = array_push($fullType,array(
+  'id' => '9999',
+  'name' => 'maison de rapport'
+));
  
 get_header();?>
 
