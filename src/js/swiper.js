@@ -30,5 +30,13 @@ const swiper_estate = new Swiper(".swiper-estate", {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  }
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 3,
+    }
+  } 
 })

@@ -25,6 +25,10 @@
 
 /* CSS Mobile */
 @media screen and (max-width: 768px) {
+  .cta-estimation{
+    right:-20px;
+  }
+
   .container {
     width: 80vw;
   }
@@ -34,10 +38,21 @@
     line-height: 3.5rem;
   }
 
+  h2{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
   .header {
     .col-g,
     .col-d {
       width: 50%;
+    }
+
+    .col-g{
+      img{
+        max-width: 220px !important;
+      }
     }
     .col-d {
       .secondary-navigation,
@@ -127,6 +142,10 @@
         .col {
           width: 100%;
           padding-bottom: 30px;
+
+          img{
+            margin: auto;
+          }
         }
 
         .col + .col {
@@ -134,7 +153,6 @@
         }
 
         .rs_footer {
-          display: flex;
 
           a + a {
             margin-left: 10px;
@@ -161,14 +179,19 @@
     }
   }
 
-  .section_vosp .list-btn {
-    display: flex;
-    flex-direction: column;
+  .section_vosp {
+    h3{
+      letter-spacing: 10px !important;
+    }
+    .list-btn {
+      display: flex;
+      flex-direction: column;
 
-    a {
-      white-space: pre-wrap;
-      line-height: 1rem;
-      padding: 10px 20px;
+      a {
+        white-space: pre-wrap;
+        line-height: 1rem;
+        padding: 10px 20px;
+      }
     }
   }
 
@@ -188,6 +211,29 @@
       a {
         line-height: 1.5rem;
         white-space: pre-wrap;
+      }
+    }
+  }
+
+  #suiveznous{
+    .container{
+      h2{
+        font-size: 2rem;
+        line-height: 2.5rem;
+
+        em{
+          font-size: 1.5rem;
+        }
+      }
+      ul{
+        li{
+          font-size: .8rem;
+
+          .cta-blue{
+            padding: 5px 20px!important;
+          }
+
+        }
       }
     }
   }
@@ -219,6 +265,51 @@
             margin-top: 200px;
           }
         }
+      }
+    }
+  }
+
+  #presentation{
+    padding: 120px 0 0 0;
+    max-height: inherit;
+
+    .main-content{
+      flex-direction: column;
+
+      .col-g,
+      .col-d{
+        width:100%;
+      }
+
+      .col-g{
+        img{
+          bottom: -100px;
+        }
+      }
+    }
+  }
+
+  #section_nosbiens{
+    padding-top: 100px !important;
+
+    .whise-filter-container{
+      flex-direction: column;
+
+      .input-select,
+      .input-text{
+        width: 100%!important;
+      }
+    }
+
+    .container-result{
+      display:none;
+    }
+
+    #estates{
+      grid-template-columns: repeat(1, 1fr) !important;
+
+      .-center{
+        top: 0!important;
       }
     }
   }
@@ -337,16 +428,23 @@
   #confiance {
     padding: 150px 0;
     .container {
+      h2{
+        font-size: 2rem;
+        em{
+          font-size: 1.4rem ;
+        }
+      }
+
       .table_qualite {
-        flex-direction: column;
+        flex-direction: column !important;
 
         .card_qualite {
-          width: 100%;
+          width: 100%!important;
         }
 
         .card_qualite + .card_qualite {
-          border-left: 0;
-          padding-left: 0;
+          border-left: 0 !important;
+          padding-left: 0 !important;
         }
       }
     }
@@ -369,34 +467,17 @@
     }
   }
 
-  #statistique {
-    .container {
+  #estimation{
+    .container{
       flex-direction: column;
 
-      .col-g {
-        width: 100%;
-        padding-top: 150px;
-      }
-
-      .col-d {
-        width: 100%;
-
-        .block_stats {
-          img {
-            width: 60%;
-            margin-left: 0;
-            position: relative;
-          }
-          span {
-            margin-top: 30px;
-          }
-        }
+      .colg{
+        margin-bottom: 50px;
       }
     }
   }
 
   #section-cta-contact {
-    height: 600px;
 
     .container {
       flex-direction: column;
@@ -409,11 +490,11 @@
       }
 
       .content_section-cta {
-        margin-left: 15%;
-        margin-top: -100px;
+        margin-left: 5%;
+        margin-top: -140px;
         z-index: 3;
-        padding: 30px;
-        width: 75%;
+        padding: 20px;
+        width: 90%;
       }
     }
   }
@@ -573,6 +654,49 @@
   }
 
   // A PROPOS
+  .page-template-apropos{
+    #introduction{
+      .container{
+        .cold{
+          padding: 0!important;
+        }
+      }
+    }
+
+    #service_cp{
+      .container{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 90vw!important;
+        margin:auto;
+
+        .colg,
+        .cold{
+          width: 100%!important;
+          padding: 15vh 5vw 5vh 4vw;
+        }
+      }
+    }
+
+    #highlights{
+      img{
+       top: 30px;
+        width: 90vw;
+      }
+    }
+
+    #txt_highlights{
+      .container{
+        width: 90%;
+        ;
+        .cold{
+          padding: 10vh 5vw 10vh 5vw;
+          width: 80vw;
+        }
+      }
+    }
+  }
+
   #assurance {
     padding-top: 50px !important;
     padding-bottom: 50px;
@@ -600,43 +724,94 @@
     }
   }
 
-  #statistiques {
-    padding-top: 100px !important;
-
-    h2 {
-      margin: 50px auto !important;
-      font-size: 2rem !important;
-      line-height: 2.5rem;
-    }
-
-    .descr {
-      padding-left: 0 !important;
-    }
-
-    .grid_stats {
-      flex-wrap: wrap;
-      .block_stat {
-        width: calc((100% - 60px) / 2) !important;
-      }
-    }
-  }
-
-  #mot_president {
-    .container {
-      .columns {
-        .col-d {
-          margin-top: 180px !important;
-        }
-      }
-    }
-  }
-
   #contact {
     padding-top: 150px !important;
 
     h2 {
       font-size: 2.5rem;
       line-height: 3rem;
+    }
+  }
+
+  //Liste bien
+  .page-template-listing-estates{
+    #listingEstates{
+      .container{
+        .whise-filter-container{
+          flex-direction: column;
+    
+          .input-select,
+          .input-text{
+            width: 100%!important;
+          }
+        }
+
+        #estates{
+          grid-template-columns: repeat(1, 1fr) !important;
+    
+          .-center{
+            top: 0!important;
+          }
+        }
+      }
+    }
+  }
+
+  //Page-estate
+
+  .page-template-single-estate{
+    #slider-home{
+      top: -50px;
+      
+      .container{
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+
+        .col-d{
+          flex-direction: column;
+          width: 32.5%;
+          gap: 10px;
+        }
+      }
+    }
+
+    #detailsEstate{
+      margin-top: 0;
+      .container{
+        .accordeon-content{
+          .list-table{
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+            -webkit-column-gap: 0;
+            -moz-column-gap: 0;
+            column-gap: 0;
+          }
+        }
+      }
+    }
+
+    #contact-banner{
+      .container{
+        flex-direction: column;
+
+        .colg{
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    #estimation{
+      display: none;
+    }
+
+    #presentation{
+      padding-bottom: 100px;
+    }
+
+    #newsletter{
+      
     }
   }
 
