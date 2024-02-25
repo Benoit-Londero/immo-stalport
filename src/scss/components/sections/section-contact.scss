@@ -52,8 +52,10 @@
     }
 
     .adresse{
-      width: 100%;
-      border-bottom: 1px solid $middle-gray;
+      input{
+        width: 100%;
+        border-bottom: 1px solid $middle-gray;
+      }
     }
 
     textarea{
