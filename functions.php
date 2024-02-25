@@ -73,3 +73,116 @@ function getUrlFromFr($id){
     }
   }
 }
+
+////////////////////////////////////////////////////////////////////////
+
+/***********************
+       * WPCF 7 *
+************************/
+
+
+function getClientTokenFunction($token){
+
+  //Url Token Client
+  $urlClientToken = 'https://api.whise.eu/v1/admin/clients/token';
+
+  //The data you want to send via POST
+  $fields = [
+    'ClientId' => '10664',
+    'OfficeId' => '13244'
+  ];
+
+  $authorization = "Authorization: Bearer " . $token;
+
+  //Encode les paramètre poste en JSON
+  $fields_string = json_encode($fields);
+
+  //Créer requête curl
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+  curl_setopt($ch,CURLOPT_POST, true);
+  curl_setopt($ch,CURLOPT_URL, $urlClientToken);
+  curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+  curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+
+  $result = curl_exec($ch);
+  $result = json_decode($result);
+
+  return $result->token;
+}
+
+add_action('wpcf7_mail_sent', 'your_wpcf7_function');
+
+function your_wpcf7_function($contact_form)
+{
+    $titleArray = array('Contact','S\'inscrire');
+    $tokenClient = getClientTokenFunction('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODQ1MzMyMn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.P_SFcDZWfAzapAWmeL5qRynvA7qrPsujaWaHP5osP_Q');
+
+    $title = $contact_form->title;
+    $lang = get_bloginfo('language');
+    $submission = WPCF7_Submission::get_instance();
+
+    if ($submission) {
+        $posted_data = $submission->get_posted_data();
+    }
+
+    if (in_array($title, $titleArray)) {
+        $nom = $posted_data['your-name'];
+        $prenom = $posted_data['your-surname'];
+        $email = $posted_data['your-email'];
+        $telephone = $posted_data['your-phone'];
+        $message = 'Message provenant du site internet : ' . $posted_data['your-message'];
+
+        $bienId = $posted_data['prefill'];
+
+        if ($bienId == 0 || $bienId == NULL) {
+            $arrId = null;
+        } else {
+            $arrId = array($bienId);
+        }
+
+        //Url Token Client
+        $url = 'https://api.whise.eu/v1/contacts/create';
+
+        //The data you want to send via POST
+        $fieldsArray = array(
+            "AgreementEmail" => true,
+            "AgreementSms" => true,
+            "AgreementMailingCampaign" => true,
+            "Comments" => $message,
+            "CountryId" => 1,
+            "EstateIds" => $arrId,
+            "FirstName" => $prenom,
+            "LanguageId" => 'fr-BE',
+            "Message" => $message,
+            "Name" => $nom,
+            "OfficeIds" => array(3167),
+            "PrivateEmail" => $email,
+            "PrivateTel" => $telephone,
+        );
+
+        $fields = json_encode($fieldsArray);
+
+        $authorization = "Authorization: Bearer " . $token;
+
+        //Créer requête curl
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $result = curl_exec($ch);
+        $result = json_decode($result);
+
+        if ($result->isValidRequest) {
+            // Set session variable to indicate success
+            $_SESSION['wpcf7_whise_success'] = true;
+        } else {
+            // Set session variable to indicate error
+            $_SESSION['wpcf7_whise_success'] = false;
+        }
+    }
+}
+?>

@@ -26,7 +26,7 @@
 /* CSS Mobile */
 @media screen and (max-width: 768px) {
   .cta-estimation{
-    right:-100px;
+    right:-120px;
   }
 
   .container {
@@ -80,16 +80,20 @@
     position: fixed;
     z-index: 15;
     display: block;
+    overflow: hidden;
 
     .primary-navigation {
       position: absolute;
-      bottom: 10vh;
+      bottom: 12vh;
       left: 10vw;
 
       ul {
         list-style: none;
 
         li {
+          text-align: left;
+          text-transform: capitalize;
+
           a {
             font-weight: 300;
             font-size: 2.5rem;
@@ -105,14 +109,11 @@
         }
 
         .cta {
-          background-color: #b52b43;
-          border-radius: 30px;
-          padding: 0;
           color: #fff;
           text-decoration: none;
-          text-transform: capitalize;
           font-weight: 300;
           letter-spacing: 0;
+          padding: 0;
         }
       }
     }
