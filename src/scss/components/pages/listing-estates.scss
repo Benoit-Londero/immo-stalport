@@ -282,6 +282,8 @@
 
           .container-image {
             img {
+              min-height: 220px;
+              height: 220px;
               max-height: 220px;
               object-fit: cover;
               width: 100%;
