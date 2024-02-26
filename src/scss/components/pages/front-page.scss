@@ -441,11 +441,12 @@
         box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
         transition: transform ease-in-out 200ms;
 
-        .container-image {
+        .item-thumbnail {
+          min-height: 220px;
+          height: 220px;
+          max-height: 220px;
           img {
-            min-height: 220px;
-            height: 220px;
-            max-height: 220px;
+            height: 100%;
             object-fit: cover;
             width: 100%;
           }
