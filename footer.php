@@ -1,5 +1,4 @@
-<?php if(!is_front_page(  )):
-    get_template_part( 'templates-parts/section-suiveznous' );?>
+<?php get_template_part( 'templates-parts/section-suiveznous' );?>
 
     <footer>
         <div class="container">
@@ -83,7 +82,4 @@
             </div>
         </div>
     </footer>
-
-<?php endif;
-
-wp_footer(); ?>
+<?php wp_footer(); ?>
