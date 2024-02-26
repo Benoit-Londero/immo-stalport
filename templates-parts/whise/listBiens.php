@@ -183,7 +183,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
                 <div class="item-content">
                   <div class="item-title">
-                    <?php echo '<p><strong>'.$type.'</strong> - '. $availableType . ' - <strong>'.$estate->city.'</strong></p>';?>
+                    <?php echo '<p><strong>'.$purpose.'</strong> - '. $availableType . ' - <strong>'.$estate->city.'</strong></p>';?>
                   </div>
                     
                   <div class="item-detail">

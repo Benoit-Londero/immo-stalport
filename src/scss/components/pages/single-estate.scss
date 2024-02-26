@@ -1,253 +1,250 @@
-.page-template-single-estate{
-     header{
-          background-repeat: no-repeat!important;
-          background-size: cover!important;
-          .container{
-               position: relative;
-               height: 80vh;
+.page-template-single-estate {
+  header {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    .container {
+      position: relative;
+      height: 80vh;
 
-               h1{
-                    text-align: center;
-                    color: $primary-color;
-                    position: absolute;
-                    bottom: 370px;
-                    margin: auto;
-                    z-index: 10;
-                    font-size: 3rem;
-                    width: 100%;
-                    line-height: 3rem;
-                    font-family: "sofia-pro", sans-serif;
+      h1 {
+        text-align: center;
+        color: $primary-color;
+        position: absolute;
+        bottom: 370px;
+        margin: auto;
+        z-index: 10;
+        font-size: 3rem;
+        width: 100%;
+        line-height: 3rem;
+        font-family: "sofia-pro", sans-serif;
 
-                    strong{
-                         color: $light;
-                         font-weight: 800;
-                    }
-               }
-          }
-     }
+        strong {
+          color: $light;
+          font-weight: 800;
+        }
+      }
+    }
+  }
 
-     #slider-home{
-          position: relative;
-          top:-350px;
+  #slider-home {
+    position: relative;
+    top: -350px;
 
-          .container{
-               display: flex;
-               gap: 30px;
-               justify-content: space-between;
+    .container {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
 
-               .col-g,
-               .col-d{
-                    display:flex;
-                    width: 70%;
+      .col-g,
+      .col-d {
+        display: flex;
+        width: 70%;
 
-                    img{
-                         object-fit: cover;
-                    }
-               }
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
 
-               .col-d{
-                    flex-direction: column;
-                    width: 30%;
-                    gap: 30px;
-               }
-          }
-     }
+      .col-d {
+        flex-direction: column;
+        width: 30%;
+        gap: 30px;
+      }
+    }
+  }
 
-     #detailsEstate{
-          margin-top: -250px;
+  #detailsEstate {
+    margin-top: -250px;
 
-          .descr_bien{
-               border-bottom: 1px solid $dark-gray;
-               margin-bottom: 100px;
-          }
+    .descr_bien {
+      border-bottom: 1px solid $dark-gray;
+      margin-bottom: 100px;
+    }
 
-          .container{
-               .accordeon-content{
-                    padding: 80px 0;
+    .container {
+      .accordeon-content {
+        padding: 80px 0;
 
-                    .list-table{
-                         -webkit-column-count: 2;
-                         -moz-column-count: 2;
-                         column-count: 2;
-                         -webkit-column-gap: 6vh;
-                         -moz-column-gap: 6vh;
-                         column-gap: 6vh;
+        .list-table {
+          -webkit-column-count: 2;
+          -moz-column-count: 2;
+          column-count: 2;
+          -webkit-column-gap: 6vh;
+          -moz-column-gap: 6vh;
+          column-gap: 6vh;
 
-                         .accordion{
-                              display: flex;
-                              justify-content: space-between;
-                              padding-bottom: 15px;
-                              border-bottom: 1px solid $middle-gray;
-                              margin-top: 20px;
-                              margin-bottom: 10px;
-                              overflow: hidden;
-                              transition: all ease-in-out 300ms;
-
-                              h3{
-                                   font-size: 1rem;
-                                   line-height: 1.2rem;
-                                   text-transform: uppercase;
-                                   
-                              }
-
-                              svg{
-                                   height: 30px;
-                                   transform: rotate(180deg);
-                                   transition: all ease-in-out 300ms;
-                              }
-
-                         }
-
-                         .active{
-                              svg{
-                                   transform: rotate(0deg);
-                                   transition: all ease-in-out 300ms;
-                              }
-                         }
-
-                         .panel{
-                              padding: 0 18px;
-                              background-color: white;
-                              max-height: 0;
-                              overflow: hidden;
-                              transition: max-height 0.2s ease-out;
-
-                              p{
-                                   margin-bottom: 0;
-                                   display: flex;
-                                   justify-content: space-between;
-                                   color: $dark-gray;
-                              }
-     
-                              .label{
-                                   font-weight: 400;
-                                   text-align: left;
-                              }
-                         }
-                    }
-               }
-          }
-     }
-
-     #slider-bottom{
-          margin-bottom: 100px;
-
-          .container{
-               position: relative;
-
-               .swiper-wrapper {
-
-                    .swiper-slide{
-                         a{
-                              max-height: 300px;
-                              height: 250px;
-                              overflow: hidden;
-                              display: block;
-     
-                              img{
-                                   object-fit: cover;
-                                   height: 100%;
-                                   width: 100%;
-                              }
-                         }
-                    }
-               }
-     
-               .swiper-button-next,
-               .swiper-button-prev{
-                    position: absolute;
-                    top: 50%;
-                    left: -50px;
-                    right: auto;
-                    background-color: $light-gray;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 20px;
-     
-                    &::after{
-                         font-size: 0.8rem;
-                         color: $middle-gray
-                    }
-               }
-     
-               .swiper-button-next{
-                    right: -50px;
-                    left: auto;
-               }
-          }
-     }
-
-     #contact-banner{
-          background: $dark-gray;
-          padding: 80px 0;
-          background-repeat: no-repeat!important;
-          background-size: cover!important;
-      
-          .container{
+          .accordion {
             display: flex;
-            align-items: flex-end;
             justify-content: space-between;
-      
-            .colg{
-      
-              h3{
-                text-transform: uppercase;
-                font-size: 1rem;
-                margin-bottom: 20px;
-                letter-spacing: 7px;
-                color: #fff;
-                text-align: left;
-              }
-      
-              h2{
-                color: $primary-color;
-                text-align: left;
-      
-                strong{
-                  color:$light;
-                }
-              }
+            padding-bottom: 15px;
+            border-bottom: 1px solid $middle-gray;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: all ease-in-out 300ms;
+
+            h3 {
+              font-size: 1rem;
+              line-height: 1.2rem;
+              text-transform: uppercase;
             }
-      
-            .cold{
-              .cta-border{
-                color:$light;
-                border-color: $light;
-              }
+
+            svg {
+              height: 30px;
+              transform: rotate(180deg);
+              transition: all ease-in-out 300ms;
             }
           }
-     }
 
-     #presentation{
-          max-width: inherit;
-          padding-bottom: 400px;
-     }
-
-     #image{
-          min-height: 600px;
-          background-size: cover!important;
-          position:fixed;
-     }
-
-     #newsletter{
-          padding: 80px 0;
-
-          .container{
-               h3{
-                    text-transform: uppercase;
-                    color:$middle-gray;
-                    font-size: 1rem;
-                    letter-spacing: 10px;
-                    font-weight: 200;
-               }
-
-               h2{
-                    color:$primary-color;
-
-                    strong{
-                         color: $dark-gray;
-                    }
-               }
+          .active {
+            svg {
+              transform: rotate(0deg);
+              transition: all ease-in-out 300ms;
+            }
           }
-     }
+
+          .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+            p {
+              margin-bottom: 0;
+              display: flex;
+              justify-content: space-between;
+              color: $dark-gray;
+            }
+
+            .label {
+              font-weight: 400;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #slider-bottom {
+    margin-bottom: 100px;
+
+    .container {
+      position: relative;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          a {
+            max-height: 300px;
+            height: 250px;
+            overflow: hidden;
+            display: block;
+
+            img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        left: -50px;
+        right: auto;
+        background-color: $light-gray;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+
+        &::after {
+          font-size: 0.8rem;
+          color: $middle-gray;
+        }
+      }
+
+      .swiper-button-next {
+        right: -50px;
+        left: auto;
+      }
+    }
+  }
+
+  #contact-banner {
+    background: $dark-gray;
+    padding: 80px 0;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+    .container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .colg {
+        h3 {
+          text-transform: uppercase;
+          font-size: 1rem;
+          margin-bottom: 20px;
+          letter-spacing: 7px;
+          color: #fff;
+          text-align: left;
+        }
+
+        h2 {
+          color: $primary-color;
+          text-align: left;
+
+          strong {
+            color: $light;
+          }
+        }
+      }
+
+      .cold {
+        .cta-border {
+          color: $light;
+          border-color: $light;
+        }
+      }
+    }
+  }
+
+  #presentation {
+    max-width: inherit;
+    padding-bottom: 400px;
+  }
+
+  #image {
+    min-height: 600px;
+    background-size: cover !important;
+    position: fixed;
+  }
+
+  #newsletter {
+    padding: 80px 0;
+
+    .container {
+      h3 {
+        text-transform: uppercase;
+        color: $middle-gray;
+        font-size: 1rem;
+        letter-spacing: 10px;
+        font-weight: 200;
+      }
+
+      h2 {
+        color: $primary-color;
+
+        strong {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
 }
