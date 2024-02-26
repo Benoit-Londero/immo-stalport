@@ -4,7 +4,7 @@ $(document).ready(function () {
     allowClear: true,
     debug: true,
     multiple: true,
-    width: resolve,
+    width: "resolve",
   });
 
   $(".select-custom-lib").click(function (event) {
