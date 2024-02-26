@@ -20,7 +20,6 @@ foreach($estates as $estate):
 endforeach;
 
 $listDetails = getListCategory($tokenClient);
-$purp = $estate->category->id;
 
 $status = array('À vendre', 'À louer', 'Vendu', 'Loué');
 
@@ -58,28 +57,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         case 'communes':
           $value = 'Communes';
           break;
-      };
-      
-      switch($purp){
-        case 1:
-            $purpose = 'Maison';
-            break;
-        case 2:
-            $purpose = 'Appartement';
-            break;
-        case 3:
-            $purpose = 'Bureau';
-            break;
-        case 4:
-            $purpose = 'Commerce';
-            break;
-        case 5:
-            $purpose = 'Batiment industriel';
-            break;
-        case 6:
-            $purpose = 'Garage / Parking';
-            break;
-    }?>
+      };?>
 
     <div id="resume_filter_order">
       <h2>Trier par : <span><?php echo $value;?></span></h2>
@@ -98,6 +76,8 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
           $surface = $estate->area;
           $price = $estate->price;
           $peb = $estate->energyClass;
+          $purp = $estate->category->id;
+
 
           $iconArea = get_field('icone_area','options');
           $iconGround = get_field('icone_ground','options');
@@ -132,7 +112,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
             }
 
             $type=  '';
-            switch($estate->category){
+            switch($estate->category->id){
               case 1:
                 $type = 'Maison';
                 break;
@@ -183,7 +163,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 
                 <div class="item-content">
                   <div class="item-title">
-                    <?php echo '<p><strong>'.$purpose.'</strong> - '. $availableType . ' - <strong>'.$estate->city.'</strong></p>';?>
+                    <?php echo '<p><strong>'.$type.'</strong> - '. $availableType . ' - <strong>'.$estate->city.'</strong></p>';?>
                   </div>
                     
                   <div class="item-detail">
