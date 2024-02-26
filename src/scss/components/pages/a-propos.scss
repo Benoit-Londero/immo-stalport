@@ -1,11 +1,11 @@
 .page-template-apropos {
   #introduction,
   #assurance,
-  #citation{
-    background:#fff;
+  #citation {
+    background: #fff;
   }
 
-  #introduction{
+  #introduction {
     padding-bottom: 5vh;
 
     .container {
@@ -25,16 +25,15 @@
 
           h1 {
             font-size: 3rem;
-            font-family: 'Sofia-pro',sans-serif;
+            font-family: "Sofia-pro", sans-serif;
             color: $dark-gray;
             font-weight: 300;
             line-height: 3.5rem;
-
           }
         }
       }
       .cold {
-        padding-left: 20%;
+        padding-left: 30%;
         margin: 100px 0 0 0;
 
         h2 {
@@ -56,7 +55,6 @@
 
         .intro,
         .par_cta {
-
           ul {
             border-left: 5px solid $primary-color;
             padding-left: 20px;
@@ -87,55 +85,55 @@
     }
   }
 
-  #service_cp{
-    .container{
+  #service_cp {
+    .container {
       width: 85vw;
       display: flex;
       justify-content: space-between;
       margin-left: 0;
 
       .colg,
-      .cold{
-        width:40vw;
+      .cold {
+        width: 40vw;
       }
 
-      .colg{
+      .colg {
         padding: 22vh 10vw 10vh 15vw;
         background-color: #fff;
 
-        h2{
+        h2 {
           margin-bottom: 80px;
         }
 
-        p{
+        p {
           margin-bottom: 20px;
         }
       }
 
-      .cold{
-        .swiper-about{
+      .cold {
+        .swiper-about {
           position: relative;
           margin-right: 0;
           margin-left: -10%;
           width: 110%;
 
-          .swiper-wrapper{
+          .swiper-wrapper {
             max-height: 520px;
 
-            .swiper-slide{
-                height: 520px !important;
-                overflow: hidden;
-                img{
-                  height: 100%;
-                  width: 100%;
-                  object-fit: cover;
-                  max-width: inherit;
-                }
+            .swiper-slide {
+              height: 520px !important;
+              overflow: hidden;
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                max-width: inherit;
+              }
             }
           }
 
           .swiper-button-prev,
-          .swiper-button-next{
+          .swiper-button-next {
             border: 1px solid #fff;
             height: 50px;
             width: 50px;
@@ -145,21 +143,21 @@
             left: auto;
           }
 
-          .swiper-button-prev{
+          .swiper-button-prev {
             right: 60px;
             border-right: none;
 
-            &::after{
+            &::after {
               content: "←";
-              color:$light;
+              color: $light;
               font-size: 1rem;
             }
           }
 
-          .swiper-button-next{
+          .swiper-button-next {
             right: 10px;
 
-            &::after{
+            &::after {
               content: "→";
               color: $light;
               font-size: 1rem;
@@ -170,61 +168,59 @@
     }
   }
 
-  #highlights{
+  #highlights {
     background-color: $light-gray;
     margin-top: -150px;
     padding-top: 200px;
 
-    .swiper-mea{
+    .swiper-mea {
       position: relative;
       margin-right: 0;
-      margin-left: -10%;
-      width: 110%;
+      width: 100%;
       bottom: -150px;
 
-      .swiper-wrapper{
+      .swiper-wrapper {
         max-height: 650px;
 
-        .swiper-slide{
-            height: 650px !important;
-            overflow: hidden;
-            
-            img{
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-              max-width: inherit;
+        .swiper-slide {
+          height: 650px !important;
+          overflow: hidden;
 
-            }
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            max-width: inherit;
+          }
         }
       }
 
       .swiper-button-prev,
-      .swiper-button-next{
+      .swiper-button-next {
         border: 1px solid #fff;
         height: 50px;
         width: 50px;
         position: absolute;
         bottom: 20px;
         top: auto;
-        right:auto;
+        right: auto;
       }
 
-      .swiper-button-prev{
+      .swiper-button-prev {
         left: 10px;
         border-right: none;
 
-        &::after{
+        &::after {
           content: "←";
-          color:$light;
+          color: $light;
           font-size: 1rem;
         }
       }
 
-      .swiper-button-next{
+      .swiper-button-next {
         left: 60px;
 
-        &::after{
+        &::after {
           content: "→";
           color: $light;
           font-size: 1rem;
@@ -233,13 +229,13 @@
     }
   }
 
-  #txt_highlights{
-    .container{
+  #txt_highlights {
+    .container {
       width: 85vw;
       margin-right: 0;
       margin-left: auto;
 
-      .cold{
+      .cold {
         padding: 15vh 15vw 10vh 10vw;
         background-color: #fff;
         width: 30vw;
@@ -248,9 +244,9 @@
         position: relative;
         z-index: 5;
 
-        p{
+        p {
           margin: 80px auto 0px;
-          &:last-child{
+          &:last-child {
             margin: 20px auto;
           }
         }
@@ -258,8 +254,8 @@
     }
   }
 
-  #citation{
-    padding:150px 0 50px;
+  #citation {
+    padding: 150px 0 50px;
   }
 
   #assurance {
@@ -270,7 +266,7 @@
     background-color: $light !important;
     padding-top: 200px;
 
-    .cta{
+    .cta {
       background-color: $secondary-color;
     }
   }
