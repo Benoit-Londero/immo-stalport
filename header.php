@@ -7,16 +7,8 @@
     <title>Immobiliere Stalport</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/ovg4lmv.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://kit.fontawesome.com/53b095485a.js" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-    <script src="<?php echo get_template_directory_uri();?>/dist/main.js" defer></script>
 
     <?php wp_head(); ?>
 </head>

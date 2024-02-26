@@ -101,7 +101,7 @@ get_header();?>
 
   <div class="input-select">
     <div class="select-custom">
-      <select class="select_localite select_2_localites" name="localite[]" multiple="multiple" style="text-transform:uppercase;">
+      <select class="select_localite select_2_localites" id="select_2_localites" name="localite[]" multiple="multiple" style="text-transform:uppercase;">
         <?php foreach( $listLocalite as $localite){ ?>
           <option value="<?php echo $localite->zip;?>"><?php echo $localite->name;?></option>
         <?php };?>
