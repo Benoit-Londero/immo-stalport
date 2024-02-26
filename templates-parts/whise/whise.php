@@ -98,7 +98,7 @@ function getListEstateHome($token,$lang = 'fr-BE'){
 
 function getListEstate($token, $lang = 'fr-BE'){
   $purpose = array();
-  $listType = array();
+  $listType = null;
   $langCode = 'fr';
 
   //Tri
@@ -110,10 +110,9 @@ function getListEstate($token, $lang = 'fr-BE'){
     $langCode = 'nl';
   }
   if(is_page(215)){
-    $purpose[] = 1;
-    $purpose[] = 3;
+    array_push($purpose,1,3);
   }else if(is_page(213)){
-    $purpose[] = 2;
+    array_push($purpose,2)
   }
 
   if(!empty($_GET['reference'])){
@@ -135,7 +134,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   if(!empty($_GET['type'])){
     foreach( $_GET['type'] as $typ):
       if($typ == "9999"){
-        $listType = array_map('intval', [1]);
+        $listType = array(1);
         $investmentEstate = true;
 
       } else {
