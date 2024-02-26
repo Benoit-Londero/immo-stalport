@@ -116,7 +116,7 @@ $iconRooms = get_field('icone_rooms','options');
                 $type = 'Appartement';
                 break;
               case 3:
-                $type = 'Maison';
+                $type = 'Bureau';
                 break;
               case 4:
                 $type = 'Commerce';

@@ -64,10 +64,15 @@
                 <a href="">Confidentialité</a>
             </div>
 
+            <?php 
+            $cookies = get_field('cookies','options');
+            $confidentialités = get_field('confidentialités','options');
+            ?>
+
             <div class="container mobile">
                 <div class="links">
-                    <a href="">Cookies</a>
-                    <a href="">Confidentialité</a>
+                    <a href=<?php if($cookies):echo $cookies['url'];endif;?>">Cookies</a>
+                    <a href="<?php if($confidentialité):echo $confidentialité['url'];endif;?>">Confidentialité</a>
                 </div>
 
                 <div class="copyright">

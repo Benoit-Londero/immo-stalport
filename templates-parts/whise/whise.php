@@ -112,7 +112,6 @@ function getListEstate($token, $lang = 'fr-BE'){
   if(is_page(215)){
     $purpose[] = 1;
     $purpose[] = 3;
-    $listType = array(1);
   }else if(is_page(213)){
     $purpose[] = 2;
   }
@@ -147,7 +146,7 @@ function getListEstate($token, $lang = 'fr-BE'){
 
   $page = 0;
   if(!empty($_GET['listPage'])){
-    $page = $_GET['listPage'] * 15;
+    $page = $_GET['listPage'] * 9;
   }
   $nbrChambre = null;
   if(!empty($_GET['chambre'])){
