@@ -55,15 +55,16 @@
           }
         }
 
-        .current-menu-item{
-          border-bottom:  2px solid $primary-color;
+        .current-menu-item a {
+          color: $primary-color;
+          padding-bottom: 10px;
+          border-bottom: 2px solid $primary-color;
         }
       }
     }
   }
 
   .primary-navigation {
-
     #menu-navigation-principale,
     #menu-navigation-principale-neerlandais {
       list-style: none;
@@ -76,9 +77,9 @@
       li {
         text-transform: uppercase;
         letter-spacing: 3px;
-        font-size: .9rem;
+        font-size: 0.9rem;
         position: relative;
-        margin-bottom:0;
+        margin-bottom: 0;
 
         a {
           color: $light;
@@ -88,6 +89,12 @@
             color: $primary-color;
           }
         }
+      }
+
+      .current-menu-item a {
+        color: $primary-color;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $primary-color;
       }
 
       .cta {
@@ -102,7 +109,7 @@
       }
 
       &::before {
-        border-radius: 30px!important;
+        border-radius: 30px !important;
       }
 
       .menu-item-has-children {
