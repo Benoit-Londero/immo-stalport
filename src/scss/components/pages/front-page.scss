@@ -174,10 +174,7 @@
       -ms-flex-align: center;
       align-items: center;
       margin-bottom: 100px;
-
-      form {
-        padding-top: 30px;
-      }
+      padding-top: 0 !important;
 
       .input-text,
       .input-select {
