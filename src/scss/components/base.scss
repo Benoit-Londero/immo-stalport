@@ -96,8 +96,8 @@ a {
     border-radius: 30px;
   }
 
-  &::after{
-    content:'';
+  &::after {
+    content: "";
   }
 
   &:hover {
@@ -144,9 +144,8 @@ a {
     border-radius: 30px;
   }
 
-  &::after{
-    content:'';
-    
+  &::after {
+    content: "";
   }
 
   &:hover {
@@ -184,9 +183,8 @@ a {
     border-radius: 30px;
   }
 
-  &::after{
-    content:'';
-
+  &::after {
+    content: "";
   }
 
   &:hover {
@@ -315,24 +313,24 @@ form {
   }
 }
 
-.cta-estimation{
-    position: fixed;
-    right: -120px;
-    left: auto;
-    top: 50%;
-    z-index: 14;
-    transform: rotateZ(270deg);
-    border-radius: 50px 60px 0px 0;
-    font-size: .7rem;
-    margin: 0;
-    font-weight: 500;
+.cta-estimation {
+  position: fixed;
+  right: -120px;
+  left: auto;
+  top: 50%;
+  z-index: 14;
+  transform: rotateZ(270deg);
+  border-radius: 50px 60px 0px 0;
+  font-size: 0.7rem;
+  margin: 0;
+  font-weight: 500;
 
-    &:hover::before{
-      border-radius: 50px 60px 0px 0 !important;
-    }
+  &:hover::before {
+    border-radius: 50px 60px 0px 0 !important;
+  }
 }
 
-#photo_separator{
+#photo_separator {
   min-height: 650px;
   width: 100vw;
   background-attachment: scroll;
@@ -341,29 +339,33 @@ form {
   background-size: cover !important;
 }
 
-.select_localite{
+.select_localite {
   width: 100%;
-  &::placeholder{
+  &::placeholder {
     text-transform: uppercase;
   }
 }
 
-
-.submit_nl{
-  p{
+.submit_nl {
+  p {
     display: flex;
     justify-content: flex-end;
 
-    input[type="email"]{
+    input[type="email"] {
       height: 47px;
       border-radius: 0;
       border: 1px solid #bbb;
       border-right: none;
     }
 
-    .cta{
+    .cta {
       border: none;
       border-radius: 0;
     }
   }
+}
+
+#header {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
