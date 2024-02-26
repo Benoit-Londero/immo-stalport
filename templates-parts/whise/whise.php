@@ -125,22 +125,9 @@ function getListEstate($token, $lang = 'fr-BE'){
     $localiteIds = $_GET['localite'];
   }
 
-  $investmentEstate = true;
 
   if(!empty($_GET['invest'])){
       $investmentEstate = true;
-  } 
-
-  if(!empty($_GET['type'])){
-    foreach( $_GET['type'] as $typ):
-      if($typ == "9999"){
-        $listType = array(1);
-        $investmentEstate = true;
-
-      } else {
-        $listType = array_map('intval', $_GET['type']);
-      }
-  endforeach;
   }
 
   $page = 0;
@@ -206,8 +193,7 @@ function getListEstate($token, $lang = 'fr-BE'){
       'PriceRange' => array(
         'Max' => $prixMaximum,
         'Min' => 0  ,
-      ),
-      'investmentEstate' => $investmentEstate
+      )
     ),
     'Sort' => array(
       array(
