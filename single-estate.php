@@ -23,7 +23,7 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
   }
 
   $purpose = '';
-  $purp = $estate->purpose->id;
+  $purp = $estate->category->id;
   $chambres = $estate->rooms;
   $terrain = $estate->groundArea;
   $surface = $estate->area;
@@ -50,12 +50,24 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
 
   switch($purp){
     case 1:
-      $purpose = 'Maison';
-      break;
+        $purpose = 'Maison';
+        break;
     case 2:
-      $purpose = 'Appartement';
-      break;
-  }
+        $purpose = 'Appartement';
+        break;
+    case 3:
+        $purpose = 'Bureau';
+        break;
+    case 4:
+        $purpose = 'Commerce';
+        break;
+    case 5:
+        $purpose = 'Batiment industriel';
+        break;
+    case 6:
+        $purpose = 'Garage / Parking';
+        break;
+}
 
 
 get_header();
@@ -82,7 +94,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
   <div class="container">
     <?php if($estate):
-      echo '<h1>'.$purpose . ' de ' . $terrain . ' m2 - ' . $rooms . 'chambre<br/><strong>Faire offre àpd '.number_format($price, 0, ',', '.') . ' €</strong></h1>';
+      echo '<h1>'.$purpose . ' de ' . $surface . ' m2 - ' . $rooms . 'chambre<br/><strong>Faire offre àpd '.number_format($price, 0, ',', '.') . ' €</strong></h1>';
     endif;?>
   </div>
 </header>

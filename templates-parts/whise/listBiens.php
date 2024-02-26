@@ -20,6 +20,7 @@ foreach($estates as $estate):
 endforeach;
 
 $listDetails = getListCategory($tokenClient);
+$purp = $estate->category->id;
 
 $status = array('À vendre', 'À louer', 'Vendu', 'Loué');
 
@@ -28,15 +29,7 @@ $subCategoryList = getSubCategory();
 
 $baseurl = basename($_SERVER['REQUEST_URI']);
 
-$chambres = $estate->rooms;
-$terrain = $estate->groundArea;
-$surface = $estate->area;
-$price = $estate->price;
-$peb = $estate->energyClass;
 
-$iconArea = get_field('icone_area','options');
-$iconGround = get_field('icone_ground','options');
-$iconRooms = get_field('icone_rooms','options');
 
 ?>
 
@@ -65,7 +58,28 @@ $iconRooms = get_field('icone_rooms','options');
         case 'communes':
           $value = 'Communes';
           break;
-      };?>
+      };
+      
+      switch($purp){
+        case 1:
+            $purpose = 'Maison';
+            break;
+        case 2:
+            $purpose = 'Appartement';
+            break;
+        case 3:
+            $purpose = 'Bureau';
+            break;
+        case 4:
+            $purpose = 'Commerce';
+            break;
+        case 5:
+            $purpose = 'Batiment industriel';
+            break;
+        case 6:
+            $purpose = 'Garage / Parking';
+            break;
+    }?>
 
     <div id="resume_filter_order">
       <h2>Trier par : <span><?php echo $value;?></span></h2>
@@ -78,6 +92,16 @@ $iconRooms = get_field('icone_rooms','options');
         foreach($estates as $estate){
           $isAvailable = true;
           $availableType = '';
+
+          $chambres = $estate->rooms;
+          $terrain = $estate->groundArea;
+          $surface = $estate->area;
+          $price = $estate->price;
+          $peb = $estate->energyClass;
+
+          $iconArea = get_field('icone_area','options');
+          $iconGround = get_field('icone_ground','options');
+          $iconRooms = get_field('icone_rooms','options');
           
           $isNewPrice = caclulateIsNewPrice($estate->createDateTime, $estate->priceChangeDateTime);
           $isNew = caclulateIsNew($estate->createDateTime);
