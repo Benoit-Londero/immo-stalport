@@ -26,10 +26,10 @@ footer {
           list-style: none;
           li {
             margin-bottom: 0;
-            line-height: 1.2rem;
+            line-height: 1.5rem;
             text-align: left;
             a {
-              font-size: 0.8rem;
+              font-size: 1rem;
               letter-spacing: 1px;
 
               &:hover {
@@ -56,28 +56,25 @@ footer {
         }
       }
 
-
       .rs_footer {
         width: 33%;
-        color:$light;
+        color: $light;
         border-left: 1px solid $light-gray;
 
-        p{
-          color:$light;
+        p {
+          color: $light;
         }
 
-        br{
+        br {
           display: none;
         }
 
         a {
           display: block;
 
-          
-
-          em{
-            font-family: "sofia-pro",sans-serif;
-            color:$primary-color;
+          em {
+            font-family: "sofia-pro", sans-serif;
+            color: $primary-color;
           }
         }
       }
@@ -90,9 +87,9 @@ footer {
     width: 70vw;
     margin: auto;
 
-    p{
-      color:$primary-color;
-      font-size: .7rem;
+    p {
+      color: $primary-color;
+      font-size: 0.7rem;
       text-align: center;
       line-height: 1.2rem;
     }
