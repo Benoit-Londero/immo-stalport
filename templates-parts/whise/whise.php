@@ -112,7 +112,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   if(is_page(215)){
     array_push($purpose,1,3);
   }else if(is_page(213)){
-    array_push($purpose,2)
+    array_push($purpose,2);
   }
 
   if(!empty($_GET['reference'])){
