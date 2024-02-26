@@ -125,7 +125,7 @@ function getListEstate($token, $lang = 'fr-BE'){
     $localiteIds = $_GET['localite'];
   }
 
-  $investmentEstate = false;
+  $investmentEstate = true;
 
   if(!empty($_GET['invest'])){
       $investmentEstate = true;
