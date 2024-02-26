@@ -1,26 +1,35 @@
-#suiveznous{
+#suiveznous {
+  .container {
+    text-align: center;
+    backdrop-filter: brightness(0.5);
+    width: 80vw;
+    padding: 80px 10vw;
 
-     .container{
-          text-align: center;
-          backdrop-filter: brightness(.5);
-          width: 80vw;
-          padding: 80px 10vw;
+    h2 {
+      color: $light;
 
+      em {
+        color: $primary-color;
+      }
+    }
 
-          h2{
-               color:$light;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 20px;
 
-               em{
-                    color:$primary-color;
-               }
+      li {
+        margin-bottom: 0;
+
+        a {
+          &::before {
+            left: 0;
+            top: 0;
           }
-
-          ul{
-               display: flex;
-               list-style: none;
-               gap: 30px;
-               justify-content: center;
-               margin-top: 20px;
-          }
-     }
+        }
+      }
+    }
+  }
 }
