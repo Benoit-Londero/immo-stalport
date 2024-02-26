@@ -1,11 +1,11 @@
-#presentation{
+#presentation {
   background: $light-gray;
   padding: 150px 0 0 0;
   max-height: 800px;
-  
+
   .main-content {
-  display: flex;
-  gap: 50px;
+    display: flex;
+    gap: 50px;
 
     .col-g {
       h2 {
@@ -18,7 +18,7 @@
         }
       }
 
-      .ctt_img{
+      .ctt_img {
         max-height: 750px;
         overflow: hidden;
         bottom: -200px;
@@ -33,7 +33,7 @@
     }
 
     .col-d {
-      padding-top: 120px;
+      padding-top: 180px;
 
       .cta {
         border-radius: 25px;
