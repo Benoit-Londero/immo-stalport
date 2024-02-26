@@ -123,7 +123,7 @@ get_template_part( 'templates-parts/whise/log' );?>
     <p><?php echo $estate->shortDescription[0]->content;?></p>
   </div>
   <div class="container">
-      <h2>Caractéristique du bien</h2>
+      <h2>Caractéristiques du bien</h2>
 
   <div class="accordeon-content">
     <div class="list-table">

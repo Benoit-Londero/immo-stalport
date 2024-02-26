@@ -97,8 +97,8 @@ get_template_part( 'templates-parts/header-nav');?>
                 endif;?>
             </div>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev-2"></div>
+            <div class="swiper-button-next-2"></div>
         </div>
     </div>
 </section>
