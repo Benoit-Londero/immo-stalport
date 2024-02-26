@@ -45,6 +45,7 @@
 
   .header {
     max-height: 200px;
+    min-height: 200px;
     .col-g,
     .col-d {
       width: 50%;
@@ -103,6 +104,10 @@
 
           .sub-menu {
             display: none;
+          }
+
+          .cta {
+            text-transform: capitalize;
           }
         }
 
