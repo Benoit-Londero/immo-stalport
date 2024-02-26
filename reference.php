@@ -24,6 +24,13 @@ get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
 </header>
 
+<section id="title_listing">
+    <?php 
+        $title = get_field('titre_page');
+        if($title): echo $title; endif;
+    ?>
+</section>
+
 <section id="listingEstates">
     <div class="container">
         <div class="whise-list-biens">
