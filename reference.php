@@ -25,10 +25,12 @@ get_template_part( 'templates-parts/header-nav');?>
 </header>
 
 <section id="title_listing">
-    <?php 
-        $title = get_field('titre_page');
-        if($title): echo $title; endif;
-    ?>
+    <div class="container">
+        <?php 
+            $title = get_field('titre_page');
+            if($title): echo $title; endif;
+        ?>
+    </div>
 </section>
 
 <section id="listingEstates">
