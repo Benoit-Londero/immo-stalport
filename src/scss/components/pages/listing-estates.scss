@@ -53,10 +53,10 @@
             .select2-selection--multiple {
               background-color: white;
               border: 1px solid #eeeef0 !important;
-              border-radius: 20px !important;
+              border-radius: 5px !important;
               min-height: 40px !important;
-              max-height: 40px !important;
               line-height: 25px;
+              width: 100%;
               overflow: scroll;
             }
           }
