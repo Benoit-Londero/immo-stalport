@@ -228,7 +228,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
 </div>
 <?php } else { ?>
 <div class="no-estate">
-    <?php echo get_field('no-estate','options'); ?>
+    <h2 style="text-align:center;"><?php echo get_field('no-estate','options'); ?></h2>
 </div>
 <?php } ?>
 
