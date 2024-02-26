@@ -55,24 +55,26 @@
                 endif;
             ?>
         </div>
+
+        <?php 
+            $cookies = get_field('cookies','options');
+            $confidentialite = get_field('confidentialité','options');
+            ?>
         <div class="footer_bottom">
             <div class="container desktop">
-                <a href="">Cookies</a>
+                <a href="<?php if($cookies):echo $cookies['url'];endif;?>">Cookies</a>
                 <div>
                     <?php echo get_field('copyright','options');?>
                 </div>
-                <a href="">Confidentialité</a>
+                <a href="<?php if($confidentialite):echo $confidentialite['url'];endif;?>">Confidentialité</a>
             </div>
 
-            <?php 
-            $cookies = get_field('cookies','options');
-            $confidentialités = get_field('confidentialités','options');
-            ?>
+            
 
             <div class="container mobile">
                 <div class="links">
-                    <a href=<?php if($cookies):echo $cookies['url'];endif;?>">Cookies</a>
-                    <a href="<?php if($confidentialité):echo $confidentialité['url'];endif;?>">Confidentialité</a>
+                    <a href="<?php if($cookies):echo $cookies['url'];endif;?>">Cookies</a>
+                    <a href="<?php if($confidentialite):echo $confidentialite['url'];endif;?>">Confidentialité</a>
                 </div>
 
                 <div class="copyright">
