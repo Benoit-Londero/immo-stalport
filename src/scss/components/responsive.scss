@@ -25,8 +25,8 @@
 
 /* CSS Mobile */
 @media screen and (max-width: 768px) {
-  .cta-estimation{
-    right:-120px;
+  .cta-estimation {
+    right: -120px;
   }
 
   .container {
@@ -38,19 +38,20 @@
     line-height: 3.5rem;
   }
 
-  h2{
+  h2 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 
   .header {
+    max-height: 200px;
     .col-g,
     .col-d {
       width: 50%;
     }
 
-    .col-g{
-      img{
+    .col-g {
+      img {
         max-width: 220px !important;
       }
     }
@@ -78,7 +79,7 @@
     transform: translateX(100vw);
     transition: all ease-in 300ms;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 15;
     display: block;
@@ -94,7 +95,6 @@
 
         li {
           text-align: left;
-          text-transform: capitalize;
 
           a {
             font-weight: 300;
@@ -146,7 +146,7 @@
           width: 100%;
           padding-bottom: 30px;
 
-          img{
+          img {
             margin: auto;
           }
         }
@@ -156,7 +156,6 @@
         }
 
         .rs_footer {
-
           a + a {
             margin-left: 10px;
           }
@@ -183,7 +182,7 @@
   }
 
   .section_vosp {
-    h3{
+    h3 {
       letter-spacing: 10px !important;
     }
     .list-btn {
@@ -218,24 +217,23 @@
     }
   }
 
-  #suiveznous{
-    .container{
-      h2{
+  #suiveznous {
+    .container {
+      h2 {
         font-size: 2rem;
         line-height: 2.5rem;
 
-        em{
+        em {
           font-size: 1.5rem;
         }
       }
-      ul{
-        li{
-          font-size: .8rem;
+      ul {
+        li {
+          font-size: 0.8rem;
 
-          .cta-blue{
-            padding: 5px 20px!important;
+          .cta-blue {
+            padding: 5px 20px !important;
           }
-
         }
       }
     }
@@ -272,47 +270,51 @@
     }
   }
 
-  #presentation{
-    padding: 120px 0 0 0;
+  #presentation {
+    padding: 120px 0 100px 0;
     max-height: inherit;
 
-    .main-content{
+    .main-content {
       flex-direction: column;
 
       .col-g,
-      .col-d{
-        width:100%;
+      .col-d {
+        width: 100%;
       }
 
-      .col-g{
-        img{
-          bottom: -100px;
+      .col-g {
+        .ctt_img {
+          bottom: 0;
         }
+      }
+
+      .col-d {
+        padding-top: 50px;
       }
     }
   }
 
-  #section_nosbiens{
+  #section_nosbiens {
     padding-top: 100px !important;
 
-    .whise-filter-container{
+    .whise-filter-container {
       flex-direction: column;
 
       .input-select,
-      .input-text{
-        width: 100%!important;
+      .input-text {
+        width: 100% !important;
       }
     }
 
-    .container-result{
-      display:none;
+    .container-result {
+      display: none;
     }
 
-    #estates{
+    #estates {
       grid-template-columns: repeat(1, 1fr) !important;
 
-      .-center{
-        top: 0!important;
+      .-center {
+        top: 0 !important;
       }
     }
   }
@@ -431,10 +433,10 @@
   #confiance {
     padding: 150px 0;
     .container {
-      h2{
+      h2 {
         font-size: 2rem;
-        em{
-          font-size: 1.4rem ;
+        em {
+          font-size: 1.4rem;
         }
       }
 
@@ -442,7 +444,7 @@
         flex-direction: column !important;
 
         .card_qualite {
-          width: 100%!important;
+          width: 100% !important;
         }
 
         .card_qualite + .card_qualite {
@@ -470,18 +472,17 @@
     }
   }
 
-  #estimation{
-    .container{
+  #estimation {
+    .container {
       flex-direction: column;
 
-      .colg{
+      .colg {
         margin-bottom: 50px;
       }
     }
   }
 
   #section-cta-contact {
-
     .container {
       flex-direction: column;
       padding: 0;
@@ -657,42 +658,41 @@
   }
 
   // A PROPOS
-  .page-template-apropos{
-    #introduction{
-      .container{
-        .cold{
-          padding: 0!important;
+  .page-template-apropos {
+    #introduction {
+      .container {
+        .cold {
+          padding: 0 !important;
         }
       }
     }
 
-    #service_cp{
-      .container{
+    #service_cp {
+      .container {
         flex-direction: column-reverse;
         align-items: center;
-        width: 90vw!important;
-        margin:auto;
+        width: 90vw !important;
+        margin: auto;
 
         .colg,
-        .cold{
-          width: 100%!important;
+        .cold {
+          width: 100% !important;
           padding: 15vh 5vw 5vh 4vw;
         }
       }
     }
 
-    #highlights{
-      img{
-       top: 30px;
+    #highlights {
+      img {
+        top: 30px;
         width: 90vw;
       }
     }
 
-    #txt_highlights{
-      .container{
+    #txt_highlights {
+      .container {
         width: 90%;
-        ;
-        .cold{
+        .cold {
           padding: 10vh 5vw 10vh 5vw;
           width: 80vw;
         }
@@ -737,23 +737,23 @@
   }
 
   //Liste bien
-  .page-template-listing-estates{
-    #listingEstates{
-      .container{
-        .whise-filter-container{
+  .page-template-listing-estates {
+    #listingEstates {
+      .container {
+        .whise-filter-container {
           flex-direction: column;
-    
+
           .input-select,
-          .input-text{
-            width: 100%!important;
+          .input-text {
+            width: 100% !important;
           }
         }
 
-        #estates{
+        #estates {
           grid-template-columns: repeat(1, 1fr) !important;
-    
-          .-center{
-            top: 0!important;
+
+          .-center {
+            top: 0 !important;
           }
         }
       }
@@ -762,27 +762,27 @@
 
   //Page-estate
 
-  .page-template-single-estate{
-    #header{
-      .container{
-        h1{
+  .page-template-single-estate {
+    #header {
+      .container {
+        h1 {
           font-size: 2.5rem;
           line-height: 2.5rem;
           top: 200px;
-          bottom:auto;
+          bottom: auto;
         }
       }
     }
 
-    #slider-home{
+    #slider-home {
       top: -50px;
-      
-      .container{
+
+      .container {
         display: flex;
         gap: 10px;
         justify-content: space-between;
 
-        .col-d{
+        .col-d {
           flex-direction: column;
           width: 32.5%;
           gap: 10px;
@@ -790,11 +790,11 @@
       }
     }
 
-    #detailsEstate{
+    #detailsEstate {
       margin-top: 0;
-      .container{
-        .accordeon-content{
-          .list-table{
+      .container {
+        .accordeon-content {
+          .list-table {
             -webkit-column-count: 1;
             -moz-column-count: 1;
             column-count: 1;
@@ -806,26 +806,25 @@
       }
     }
 
-    #contact-banner{
-      .container{
+    #contact-banner {
+      .container {
         flex-direction: column;
 
-        .colg{
+        .colg {
           margin-bottom: 40px;
         }
       }
     }
 
-    #estimation{
+    #estimation {
       display: none;
     }
 
-    #presentation{
+    #presentation {
       padding-bottom: 100px;
     }
 
-    #newsletter{
-
+    #newsletter {
     }
   }
 
