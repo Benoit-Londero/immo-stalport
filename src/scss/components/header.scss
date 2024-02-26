@@ -58,7 +58,7 @@
         .current-menu-item a {
           color: $primary-color;
           padding-bottom: 10px;
-          border-bottom: 2px solid $primary-color;
+          font-weight: 600;
         }
       }
     }
@@ -94,7 +94,7 @@
       .current-menu-item a {
         color: $primary-color;
         padding-bottom: 10px;
-        border-bottom: 2px solid $primary-color;
+        font-weight: 600;
       }
 
       .cta {
