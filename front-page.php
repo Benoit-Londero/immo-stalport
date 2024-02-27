@@ -45,7 +45,7 @@ get_header();?>
             <div class="swiper-slide" data-swiper-autoplay="8000">
                 <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                 <div class="content">
-                    <p class="baseline"  data-swiper-parallax="-100"><?php echo get_sub_field('sous-titre');?></p>
+                    <p class="baseline" data-swiper-parallax="-100"><?php echo get_sub_field('sous-titre');?></p>
                     <span  data-swiper-parallax="-200">
                       <?php echo get_sub_field('titre');?>
                       <?php $cta = get_sub_field('liens');?> 

@@ -5,6 +5,7 @@ const swiper = new Swiper(".swiper", {
   autoplay: true,
   cssMode: true,
   speed: 500,
+  parallax: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
