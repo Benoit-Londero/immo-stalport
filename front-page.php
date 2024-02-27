@@ -142,10 +142,7 @@ get_header();?>
     <button type="submit" class="cta">Rechercher</button>
   </div>
 </form>
-
         <?php
-        
-            
             if($estates && $estates != 0):
                 $i = 0;?>
                 <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
@@ -242,6 +239,5 @@ get_template_part( 'templates-parts/section-cta-contact' );
 get_template_part( 'templates-parts/section-confiance');
 
 get_template_part( 'templates-parts/section-estimation' );
-get_template_part( 'templates-parts/contact' );
 
 get_footer();?>
