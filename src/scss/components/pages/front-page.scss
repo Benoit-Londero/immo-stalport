@@ -1,6 +1,7 @@
 .page-template-front-page,
 .page-template-accueil,
-.page-id-289 {
+.page-id-289,
+.page-id-22 {
   #hero-container {
     height: 90vh;
     top: 0;
@@ -27,8 +28,7 @@
           .content {
             position: absolute;
             left: 15vw;
-            top: auto;
-            bottom: 5vw;
+            top: 45vh;
             z-index: 1;
 
             p {

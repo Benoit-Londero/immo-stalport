@@ -294,7 +294,7 @@
   // FRONT-PAGE
 
   #hero-container {
-    height: 80vh;
+    height: 150vh;
     .swiper {
       .swiper-wrapper {
         .swiper-slide {
@@ -308,6 +308,7 @@
           .content {
             position: absolute;
             left: 10vw;
+            top: 25vh;
             right: auto;
             margin-top: 200px;
           }

@@ -2,10 +2,9 @@ require("fslightbox");
 
 const swiper = new Swiper(".swiper", {
   loop: true,
-  autoplay: true,
+  autoplay: false,
   cssMode: true,
-  speed: 5000,
-  duration: 1000,
+  speed: 500,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
