@@ -100,15 +100,16 @@
           a {
             font-weight: 300;
             font-size: 2.5rem;
+            text-transform: capitalize;
           }
 
           .sub-menu {
             display: none;
           }
-
-          .cta {
-            text-transform: capitalize;
-          }
+          
+        }
+        .cta {
+          text-transform: capitalize;
         }
 
         li + li {
