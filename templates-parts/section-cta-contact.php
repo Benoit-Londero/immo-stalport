@@ -13,11 +13,13 @@
         </div>
         <?php endif;?>
         <div class="content_section-cta  <?php echo $blue == true ? 'bgDark' : '';?> from-bottom">
-            <?php if($txt): echo $txt;endif;?>
+            <span class="textContent">
+                <?php if($txt): echo $txt;endif;?>
+            </span>
             <?php if($cta):?>
-            <a href="<?php echo $cta['url'];?>" class="cta <?php echo $blue == true ? '' : 'bgBlue';?> from-bottom">
-                <?php echo $cta['title'];?>
-            </a>
+                <a href="<?php echo $cta['url'];?>" class="cta <?php echo $blue == true ? '' : 'bgBlue';?> from-bottom">
+                    <?php echo $cta['title'];?>
+                </a>
             <?php endif;?>
         </div>
     </div>

@@ -3,8 +3,6 @@ $(document).ready(function () {
     placeholder: "Localités",
     allowClear: true,
     debug: true,
-    multiple: true,
-    width: "resolve",
   });
 
   $(".select-custom-lib").click(function (event) {
