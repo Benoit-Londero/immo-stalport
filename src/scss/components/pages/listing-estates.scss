@@ -263,17 +263,23 @@
           font-size: 0.8rem;
         }
 
+        #sort{
+          flex-direction: row;
+          gap: 0;
+          width: 260px;
+          display: flex;
+          justify-content: space-between;
+          margin:0;
+          padding:0;
+        }
+
         #sortBy {
           border: 1px solid $middle-gray;
           color: $middle-gray;
           font-weight: 300;
           padding: 0;
           margin: 0;
-          flex-direction: row;
-          gap: 0;
-          width: 260px;
-          display: flex;
-          justify-content: space-between;
+          
         }
       }
 
