@@ -17,6 +17,24 @@
   }
   #listingEstates {
     .container {
+
+      #sort{
+        flex-direction: row;
+        gap: 0;
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        margin:0;
+        padding:0;
+      }
+
+      #resume_filter_order{
+        h2{
+          font-size: 1.5rem!important;
+          line-height: 1.5rem !important;
+        }
+      }
+
       .whise-filter-container {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -263,15 +281,7 @@
           font-size: 0.8rem;
         }
 
-        #sort{
-          flex-direction: row;
-          gap: 0;
-          width: 260px;
-          display: flex;
-          justify-content: space-between;
-          margin:0;
-          padding:0;
-        }
+        
 
         #sortBy {
           border: 1px solid $middle-gray;
@@ -411,12 +421,7 @@
           }
         }
 
-        #resume_filter_order{
-          h2{
-            font-size: 1.5rem;
-            line-height: 1.5rem;
-          }
-        }
+        
 
         .result-display {
           max-width: 70vw;
