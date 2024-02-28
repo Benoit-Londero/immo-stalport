@@ -181,6 +181,8 @@
       .input-text,
       .input-select {
         width: 15%;
+        min-height: 40px;
+        height: 40px;
         margin: 0.5rem auto;
         display: -webkit-box;
         display: -ms-flexbox;
