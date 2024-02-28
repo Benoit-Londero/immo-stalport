@@ -31,13 +31,7 @@
         -ms-flex-align: center;
         align-items: center;
         font-family: "sofia-pro", sans-serif;
-        flex-direction: row;
-        gap: 0;
-        width: 260px;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
+
 
         .input-text,
         .input-select {
@@ -270,11 +264,16 @@
         }
 
         #sortBy {
-          border: 1px solid $light-gray;
-          color: $light-gray;
+          border: 1px solid $middle-gray;
+          color: $middle-gray;
           font-weight: 300;
           padding: 0;
           margin: 0;
+          flex-direction: row;
+          gap: 0;
+          width: 260px;
+          display: flex;
+          justify-content: space-between;
         }
       }
 
@@ -389,7 +388,7 @@
         width: 70vw;
         max-width: 1360px;
         margin: 60px auto 50px;
-        align-items: flex-start;
+        align-items: center;
 
         .result {
           display: flex;
@@ -403,6 +402,13 @@
             margin-right: 10px;
             min-width: 150px;
             margin-top: 5px;
+          }
+        }
+
+        #resume_filter_order{
+          h2{
+            font-size: 1.5rem;
+            line-height: 1.5rem;
           }
         }
 
