@@ -31,6 +31,13 @@
         -ms-flex-align: center;
         align-items: center;
         font-family: "sofia-pro", sans-serif;
+        flex-direction: row;
+        gap: 0;
+        width: 260px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
 
         .input-text,
         .input-select {
@@ -263,7 +270,11 @@
         }
 
         #sortBy {
-          border: 1px solid #fff;
+          border: 1px solid $light-gray;
+          color: $light-gray;
+          font-weight: 300;
+          padding: 0;
+          margin: 0;
         }
       }
 
@@ -377,8 +388,7 @@
         justify-content: space-between;
         width: 70vw;
         max-width: 1360px;
-        margin: auto;
-        margin-bottom: 30px;
+        margin: 60px auto 50px;
         align-items: flex-start;
 
         .result {
