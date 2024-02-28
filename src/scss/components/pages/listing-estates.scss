@@ -31,8 +31,13 @@
       #resume_filter_order{
         margin-bottom: 20px;
         h2{
-          font-size: 1.5rem!important;
-          line-height: 1.5rem !important;
+          font-size: 1rem!important;
+          line-height: 1rem !important;
+          font-weight: 600;
+
+          span{
+            color:$primary-color;
+          }
         }
       }
 
@@ -404,7 +409,7 @@
         justify-content: space-between;
         width: 70vw;
         max-width: 1360px;
-        margin: 60px auto 50px;
+        margin: 60px auto 0px;
         align-items: center;
 
         .container-result{
