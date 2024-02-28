@@ -42,7 +42,7 @@ get_header();?>
             <?php $bg = get_sub_field('background_image');?>
 
             <?php if($bg):?>
-            <div class="swiper-slide" data-swiper-autoplay="8000">
+            <div class="swiper-slide" data-swiper-autoplay="5000">
                 <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                 <div class="content">
                     <p class="baseline" data-swiper-parallax="-100"><?php echo get_sub_field('sous-titre');?></p>
