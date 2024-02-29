@@ -108,6 +108,10 @@ a {
   }
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .cta-border {
   background-color: none;
   border: 1px solid $primary-color;
@@ -372,11 +376,11 @@ form {
 
 // Select2
 
-.select2-container--default{
-  .select2-selection--multiple{
+.select2-container--default {
+  .select2-selection--multiple {
     max-height: auto;
-    line-height:0;
-    
+    line-height: 0;
+
     .select2-selection__choice {
       background-color: $primary-color;
       border: none;
