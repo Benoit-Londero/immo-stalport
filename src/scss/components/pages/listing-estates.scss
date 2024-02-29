@@ -17,6 +17,30 @@
   }
   #listingEstates {
     .container {
+
+      #sort{
+        flex-direction: row;
+        gap: 0;
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        margin:0;
+        padding:0;
+      }
+
+      #resume_filter_order{
+        margin-bottom: 20px;
+        h2{
+          font-size: 1rem!important;
+          line-height: 1rem !important;
+          font-weight: 600;
+
+          span{
+            color:$primary-color;
+          }
+        }
+      }
+
       .whise-filter-container {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -31,6 +55,7 @@
         -ms-flex-align: center;
         align-items: center;
         font-family: "sofia-pro", sans-serif;
+
 
         .input-text,
         .input-select {
@@ -262,8 +287,15 @@
           font-size: 0.8rem;
         }
 
+        
+
         #sortBy {
-          border: 1px solid #fff;
+          border: 1px solid $middle-gray;
+          color: $middle-gray;
+          font-weight: 300;
+          padding: 0;
+          margin: 0;
+          
         }
       }
 
@@ -377,13 +409,16 @@
         justify-content: space-between;
         width: 70vw;
         max-width: 1360px;
-        margin: auto;
-        margin-bottom: 30px;
-        align-items: flex-start;
+        margin: 60px auto 0px;
+        align-items: center;
+
+        .container-result{
+          margin:0 ;
+        }
 
         .result {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
 
           h2 {
             text-transform: uppercase;
@@ -395,6 +430,8 @@
             margin-top: 5px;
           }
         }
+
+        
 
         .result-display {
           max-width: 70vw;
