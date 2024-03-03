@@ -122,7 +122,7 @@ $iconRooms = get_field('icone_rooms','options');
 
                 <div class="item-content">
                   <div class="item-title">
-                    <?php echo '<p><strong>'.$type.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
+                    <?php echo '<p><strong>'.$type.'</strong> - '. $surface . ' - <strong>'.$estate->city.'</strong></p>';?>
                   </div>
                     
                   <div class="item-detail">
