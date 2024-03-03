@@ -69,6 +69,28 @@ $iconRooms = get_field('icone_rooms','options');
                 $availableType = 'Option';
                 break;
             }
+
+            $type=  '';
+            switch($estate->category->id){
+              case 1:
+                $type = 'Maison';
+                break;
+              case 2:
+                $type = 'Appartement';
+                break;
+              case 3:
+                $type = 'Bureau';
+                break;
+              case 4:
+                $type = 'Commerce';
+                break;
+              case 5:
+                $type = 'Batiment industriel';
+                break;
+              case 6:
+                $type = 'Garage / Parking';
+                break;
+            }
            
             if($isAvailable): ?>
               <a href="<?php echo get_page_link( 274 ); ?>?reference=<?php echo $estate->id; ?>&prefill=<?php echo $estate->id; ?>&Whise=<?php echo $estate->referenceNumber; ?>">
@@ -100,7 +122,7 @@ $iconRooms = get_field('icone_rooms','options');
 
                 <div class="item-content">
                   <div class="item-title">
-                    <?php echo '<p><strong>'.$estate->name.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
+                    <?php echo '<p><strong>'.$type.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
                   </div>
                     
                   <div class="item-detail">
