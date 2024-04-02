@@ -215,15 +215,15 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
         
     if(!$args['data']['no-button']){
       if($prevLink){ ?>
-        <a href="<?php echo $prevLink ;?>"  class="btn fill secondaryColor"><?php echo "Page Précédente"; ?></a>
+        <a href="<?php echo $prevLink ;?>"  class="cta btn fill secondaryColor"><?php echo "Page Précédente"; ?></a>
       <?php }
           
       if($maxPage != $listPage) { ?>
-        <a href="<?php echo $nextLink; ?>" class="btn fill secondaryColor"><?php echo "Page suivante"; ?></a>
+        <a href="<?php echo $nextLink; ?>" class="cta  btn fill secondaryColor"><?php echo "Page suivante"; ?></a>
       <?php }
     }
     if($args['data']['see-more']){ ?>
-      <a href="<?php echo getUrlFromFr(18); ?>" class="btn fill secondaryColor"><?php echo "Voir plus"; ?></a>
+      <a href="<?php echo getUrlFromFr(18); ?>" class="cta btn fill secondaryColor"><?php echo "Voir plus"; ?></a>
     <?php } ?>
 </div>
 <?php } else { ?>

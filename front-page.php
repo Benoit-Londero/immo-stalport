@@ -76,75 +76,75 @@ get_header();?>
         <?php /* Liste bien */ ?>
         <div class="whise-list-biens">
 
-        <form class="whise-filter-container" action="https://immobiliere-stalport.be/nos-biens/" method="get">
-  <div class="input-text">
-    <input type="text" name="reference" placeholder="Référence">
-  </div>
+          <form class="whise-filter-container" action="https://immobiliere-stalport.be/nos-biens/" method="get">
+            <div class="input-text">
+              <input type="text" name="reference" placeholder="Référence">
+            </div>
 
-  <div class="input-select">
-    <div class="select-custom">
-      <p class="select-custom-lib"><span data-lib="Type de bien">Type de bien</span><i class="fa-solid fa-chevron-down"></i></p>
-        <div class="select-custom-container">
-          <label>
-            <input class="auto-focus" type="text" placeholder="Recherche...">
-          </label>
-          
-          <?php foreach( $fullType as $elem){ ?>
-            <label>
-              <input type="checkbox" name="type[]" value="<?php echo $elem['id']; ?>"
-                <?php if(in_array($elem['id'], $listType)){ echo 'checked'; } ?>>
-                  <span class="input-controller"><i class="fa-solid fa-check"></i></span>
-                  <span class="title"><?php echo ucfirst($elem['name']); ?></span>
-            </label>
-          <?php } ?>
-        </div>
-    </div>
-  </div>
+            <div class="input-select">
+              <div class="select-custom">
+                <p class="select-custom-lib"><span data-lib="Type de bien">Type de bien</span><i class="fa-solid fa-chevron-down"></i></p>
+                  <div class="select-custom-container">
+                    <label>
+                      <input class="auto-focus" type="text" placeholder="Recherche...">
+                    </label>
+                    
+                    <?php foreach( $fullType as $elem){ ?>
+                      <label>
+                        <input type="checkbox" name="type[]" value="<?php echo $elem['id']; ?>"
+                          <?php if(in_array($elem['id'], $listType)){ echo 'checked'; } ?>>
+                            <span class="input-controller"><i class="fa-solid fa-check"></i></span>
+                            <span class="title"><?php echo ucfirst($elem['name']); ?></span>
+                      </label>
+                    <?php } ?>
+                  </div>
+              </div>
+            </div>
 
-  <div class="input-select">
-    <div class="select-custom">
-      <select class="select_localite select_2_localites" id="select_2_localites" name="localite[]" multiple="multiple" style="text-transform:uppercase;">
-        <?php foreach( $listLocalite as $localite){ ?>
-          <option value="<?php echo $localite->zip;?>"><?php echo $localite->name;?></option>
-        <?php };?>
-      </select>
-    </div>
-  </div>
+            <div class="input-select">
+              <div class="select-custom">
+                <select class="select_localite select_2_localites" id="select_2_localites" name="localite[]" multiple="multiple" style="text-transform:uppercase;">
+                  <?php foreach( $listLocalite as $localite){ ?>
+                    <option value="<?php echo $localite->zip;?>"><?php echo $localite->name;?></option>
+                  <?php };?>
+                </select>
+              </div>
+            </div>
 
-  <div class="input-select one-only">
-    <div class="select-custom">
-      <p class="select-custom-lib"><span data-lib="Chambres">Chambres</span><i class="fa-solid fa-chevron-down"></i></p>
-        
-      <div class="select-custom-container">
-        <label>
-          <input class="auto-focus" type="text" placeholder="Recherche...">
-        </label>
-        <label>
-          <input type="radio" name="chambre" value="">
-          <span class="input-controller"><i class="fa-solid fa-check"></i></span>
-          <span class="title">Pas d'importance</span></label>
-            
-          <?php for($i = 1; $i < 7; $i++){ ?>
-            <label>
-              <input type="radio" name="chambre" value="<?php echo $i; ?>" <?php if($i == $nbrChambre) { echo 'checked'; } ?>>
-              <span class="input-controller"><i class="fa-solid fa-check"></i></span>
-              <span class="title">Min. <?php echo $i; ?> chambre<?php echo $i > 1 ? 's' : ''; ?></span>
-            </label>
-          <?php } ?>
-        </div>
-    </div>
-  </div>
+            <div class="input-select one-only">
+              <div class="select-custom">
+                <p class="select-custom-lib"><span data-lib="Chambres">Chambres</span><i class="fa-solid fa-chevron-down"></i></p>
+                  
+                <div class="select-custom-container">
+                  <label>
+                    <input class="auto-focus" type="text" placeholder="Recherche...">
+                  </label>
+                  <label>
+                    <input type="radio" name="chambre" value="">
+                    <span class="input-controller"><i class="fa-solid fa-check"></i></span>
+                    <span class="title">Pas d'importance</span></label>
+                      
+                    <?php for($i = 1; $i < 7; $i++){ ?>
+                      <label>
+                        <input type="radio" name="chambre" value="<?php echo $i; ?>" <?php if($i == $nbrChambre) { echo 'checked'; } ?>>
+                        <span class="input-controller"><i class="fa-solid fa-check"></i></span>
+                        <span class="title">Min. <?php echo $i; ?> chambre<?php echo $i > 1 ? 's' : ''; ?></span>
+                      </label>
+                    <?php } ?>
+                  </div>
+              </div>
+            </div>
 
-  <div class="input-text">
-    <input type="number" name="prixMaximum" placeholder="Prix max."  <?php if(!empty($_GET['prixMaximum'])) { ?>value="<?php $_GET['prixMaximum']; ?>" <?php } ?>>
-  </div>
+            <div class="input-text">
+              <input type="number" name="prixMaximum" placeholder="Prix max."  <?php if(!empty($_GET['prixMaximum'])) { ?>value="<?php $_GET['prixMaximum']; ?>" <?php } ?>>
+            </div>
 
-  <div class="buttons-container">
-    <input type="hidden" name="listPage" <?php if(!empty($_GET['listPage'])) { ?>value="<?php $_GET['listPage']; ?>"<?php } ?>>
-    <button type="submit" class="cta">Rechercher</button>
-  </div>
-</form>
-        <?php
+            <div class="buttons-container">
+              <input type="hidden" name="listPage" <?php if(!empty($_GET['listPage'])) { ?>value="<?php $_GET['listPage']; ?>"<?php } ?>>
+              <button type="submit" class="cta">Rechercher</button>
+            </div>
+          </form>
+          <?php
             if($estates && $estates != 0):
                 $i = 0;?>
                 <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
@@ -228,6 +228,10 @@ get_header();?>
                     endforeach;
                 ?></ul><?php
             endif;?>
+        </div>
+
+        <div class="seeMore">
+          <a href="<?php echo get_bloginfo('url'). '/nos-biens/';?>" class="cta">Voir plus</a>
         </div>
     <?php
         get_template_part( 'templates-parts/line-separator' );

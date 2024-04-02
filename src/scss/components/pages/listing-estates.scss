@@ -404,6 +404,11 @@
         }
       }
 
+      .btn-container{
+        text-align: center;
+        padding: 70px 0;
+      }
+
       .container-result {
         display: flex;
         justify-content: space-between;
@@ -430,8 +435,6 @@
             margin-top: 5px;
           }
         }
-
-        
 
         .result-display {
           max-width: 70vw;
