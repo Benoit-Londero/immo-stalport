@@ -27,9 +27,6 @@ $categoryList = getAllTypeBien($listDetails->purposeAndCategory);
 $subCategoryList = getSubCategory();
 
 $baseurl = basename($_SERVER['REQUEST_URI']);
-
-
-
 ?>
 
 <div class="whise-list-biens">
