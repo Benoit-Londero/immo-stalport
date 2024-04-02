@@ -94,7 +94,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
   <div class="container">
     <?php if($estate):
-      echo '<h1>'.$purpose . ' de ' . $surface . ' m2 - ' . $rooms . 'chambre<br/><strong>Faire offre àpd '.number_format($price, 0, ',', '.') . ' €</strong></h1>';
+      echo '<h1>'.$purpose . ' de ' . $surface . ' m2 - ' . $chambres . ' chambre(s)<br/><strong>Faire offre àpd '.number_format($price, 0, ',', '.') . ' €</strong></h1>';
     endif;?>
   </div>
 </header>
