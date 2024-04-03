@@ -102,8 +102,8 @@ function getListEstate($token, $lang = 'fr-BE'){
   $langCode = 'fr';
 
   //Tri
-  $field = 'city';
-  $asc = false;
+  $field = 'createDateTime';
+  $asc = true;
 
   //Langue
   if($lang == 'nl-NL'){
@@ -124,7 +124,6 @@ function getListEstate($token, $lang = 'fr-BE'){
   if(!empty($_GET['localite'])){
     $localiteIds = $_GET['localite'];
   }
-
 
   if(!empty($_GET['invest'])){
       $investmentEstate = true;
