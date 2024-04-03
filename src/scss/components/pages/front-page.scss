@@ -826,7 +826,7 @@
   }
 
   #estimation {
-    background: $dark-gray;
+    background: $primary-color;
     padding: 80px 0;
 
     .container {
@@ -844,7 +844,7 @@
         }
 
         h2 {
-          color: $primary-color;
+          color: $dark-gray;
 
           strong {
             color: $light;
