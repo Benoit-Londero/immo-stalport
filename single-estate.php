@@ -202,7 +202,7 @@ get_template_part( 'templates-parts/whise/log' );?>
                <?php if($titre_nl): echo $titre_nl;endif;?>
           </div>
           <div class="cold">
-          <?php if($cta_ct):?><a class="cta-border" href="<?php echo $cta_ct['url'];?>"><?php echo $cta_ct['title'];?></a><?php endif;?>
+          <?php if($cta_ct):?><a class="cta cta-border" href="<?php echo $cta_ct['url'];?>"><?php echo $cta_ct['title'];?></a><?php endif;?>
           </div>
      </div>
 </section>

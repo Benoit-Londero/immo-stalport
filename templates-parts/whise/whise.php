@@ -103,7 +103,7 @@ function getListEstate($token, $lang = 'fr-BE'){
 
   //Tri
   $field = 'createDateTime';
-  $asc = true;
+  $asc = false;
 
   //Langue
   if($lang == 'nl-NL'){

@@ -13,7 +13,7 @@
 
             </div>
             <div class="cold">
-                <?php if($cta_est): echo '<a href="'.$cta_est['url'].'" class="cta-border">'.$cta_est['title'].'</a>';endif;?>
+                <?php if($cta_est): echo '<a href="'.$cta_est['url'].'" class="cta cta-border">'.$cta_est['title'].'</a>';endif;?>
             </div>
     </div>
 </section>

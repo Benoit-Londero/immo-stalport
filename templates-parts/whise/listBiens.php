@@ -216,7 +216,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
       <?php }
           
       if($maxPage != $listPage) { ?>
-        <a href="<?php echo $nextLink; ?>" class="cta  btn fill secondaryColor"><?php echo "Page suivante"; ?></a>
+        <a href="<?php echo $nextLink; ?>" class="cta btn fill secondaryColor"><?php echo "Page suivante"; ?></a>
       <?php }
     }
     if($args['data']['see-more']){ ?>

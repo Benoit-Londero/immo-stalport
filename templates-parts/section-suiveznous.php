@@ -11,7 +11,7 @@
                <?php if(have_rows('rs_follow','options')):
                     while(have_rows('rs_follow','options')): the_row();
                          $cta_rs = get_sub_field('cta_rs','options') ;?>
-                         <li><a href="<?php echo $cta_rs['url'];?>" class="cta-blue"><?php echo $cta_rs['title'];?></a></li>
+                         <li><a href="<?php echo $cta_rs['url'];?>" class="cta cta-blue"><?php echo $cta_rs['title'];?></a></li>
                <?php endwhile;
                endif;?>
           </ul>
