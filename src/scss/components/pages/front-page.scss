@@ -431,7 +431,6 @@
         font-family: "Sofia-pro", sans-serif;
         text-transform: uppercase;
         letter-spacing: 3px;
-        font-size: 0.8rem;
       }
     }
 
@@ -546,6 +545,10 @@
       margin: auto;
       text-align: center;
       padding-top: 150px;
+
+      a{
+        margin: auto;
+      }
     }
   }
 
@@ -640,6 +643,10 @@
           border-left: 1px solid #eaeaea;
           padding-left: 50px;
         }
+      }
+
+      .cta{
+        margin:auto;
       }
     }
   }
