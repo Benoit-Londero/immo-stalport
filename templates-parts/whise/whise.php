@@ -191,7 +191,7 @@ function getListEstate($token, $lang = 'fr-BE'){
       'Rooms' => $nbrChambre,
       'PriceRange' => array(
         'Max' => $prixMaximum,
-        'Min' => 0  ,
+        'Min' => 0,
       )
     ),
     'Sort' => array(
