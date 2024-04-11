@@ -47,30 +47,6 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
       break;
   }
 
-  switch($estate->category->id){
-    case 1:
-      $purpose = 'Maison';
-      break;
-    case 2:
-      $purpose = 'Appartement';
-      break;
-    case 3:
-      $purpose = 'Terrain';
-      break;
-    case 4:
-      $purpose = 'Bureau';
-      break;
-    case 5:
-      $purpose = 'Commerce';
-      break;
-    case 7:
-      $purpose = 'Batiment industriel';
-      break;
-    case 7:
-      $purpose = 'Garage / Parking';
-      break;
-  } 
-
 
 get_header();
 
@@ -91,12 +67,38 @@ if($idBien == NULL) :
 endif;
 
 get_template_part( 'templates-parts/header-nav' );
-get_template_part( 'templates-parts/whise/log' );?>
+get_template_part( 'templates-parts/whise/log' );
+
+$type=  '';
+
+switch($estate->category->id){
+  case 1:
+    $type = 'Maison';
+    break;
+  case 2:
+    $type = 'Appartement';
+    break;
+  case 3:
+    $type = 'Terrain';
+    break;
+  case 4:
+    $type = 'Bureau';
+    break;
+  case 5:
+    $type = 'Commerce';
+    break;
+  case 6:
+    $type = 'Batiment industriel';
+    break;
+  case 7:
+    $type = 'Garage / Parking';
+    break;
+} ?>
 
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
   <div class="container">
     <?php if($estate): ?>
-      <h1><?php echo $purpose;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';endif;?><br/>
+      <h1><?php echo $type;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';endif;?><br/>
       <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
     <?php endif;?>
   </div>
