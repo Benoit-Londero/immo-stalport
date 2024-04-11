@@ -104,7 +104,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 </header>
 
 <?php if(current_user_can('administrator')):
-  var_dump($estate);
+  var_dump($estate->category->id);
 endif;?>
 
 <section id="slider-home">
