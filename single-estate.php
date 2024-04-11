@@ -97,7 +97,7 @@ get_template_part( 'templates-parts/whise/log' );?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
   <div class="container">
     <?php if($estate): ?>
-      <h1><?php echo $purpose;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';?><br/>
+      <h1><?php echo $purpose;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';endif;?><br/>
       <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
     <?php endif;?>
   </div>
@@ -221,4 +221,4 @@ get_template_part( 'templates-parts/whise/log' );?>
 
 <?php get_template_part( 'templates-parts/section-newsletter' );?>
 
-<?php get_footer();?>
+<?php get_footer();
