@@ -47,7 +47,7 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
       break;
   }
 
-  switch($purp){
+  switch($estate->category->id){
     case 1:
       $purpose = 'Maison';
       break;
