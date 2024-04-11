@@ -124,7 +124,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
               case 5:
                 $type = 'Commerce';
                 break;
-              case 7:
+              case 6:
                 $type = 'Batiment industriel';
                 break;
               case 7:
