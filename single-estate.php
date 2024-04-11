@@ -50,25 +50,25 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
 
   switch($purp){
     case 1:
-      $type = 'Maison';
+      $purpose = 'Maison';
       break;
     case 2:
-      $type = 'Appartement';
+      $purpose = 'Appartement';
       break;
     case 3:
-      $type = 'Terrain';
+      $purpose = 'Terrain';
       break;
     case 4:
-      $type = 'Bureau';
+      $purpose = 'Bureau';
       break;
     case 5:
-      $type = 'Commerce';
+      $purpose = 'Commerce';
       break;
     case 7:
-      $type = 'Batiment industriel';
+      $purpose = 'Batiment industriel';
       break;
     case 7:
-      $type = 'Garage / Parking';
+      $purpose = 'Garage / Parking';
       break;
   } 
 
