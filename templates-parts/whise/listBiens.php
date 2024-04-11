@@ -75,7 +75,6 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
           $peb = $estate->energyClass;
           $purp = $estate->category->id;
 
-
           $iconArea = get_field('icone_area','options');
           $iconGround = get_field('icone_ground','options');
           $iconRooms = get_field('icone_rooms','options');
@@ -117,18 +116,21 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
                 $type = 'Appartement';
                 break;
               case 3:
-                $type = 'Bureau';
+                $type = 'Terrain';
                 break;
               case 4:
-                $type = 'Commerce';
+                $type = 'Bureau';
                 break;
               case 5:
+                $type = 'Commerce';
+                break;
+              case 7:
                 $type = 'Batiment industriel';
                 break;
-              case 6:
+              case 7:
                 $type = 'Garage / Parking';
                 break;
-            }
+            } 
            
             if($isAvailable): ?>
               <a href="<?php echo get_page_link( 274 ); ?>?reference=<?php echo $estate->id; ?>&prefill=<?php echo $estate->id; ?>&Whise=<?php echo $estate->referenceNumber; ?>">
@@ -216,7 +218,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
       <?php }
           
       if($maxPage != $listPage) { ?>
-        <a href="<?php echo $nextLink; ?>" class="cta btn fill secondaryColor"><?php echo "Page suivante"; ?></a>
+        <a href="<?php echo $nextLink; ?>" class="cta  btn fill secondaryColor"><?php echo "Page suivante"; ?></a>
       <?php }
     }
     if($args['data']['see-more']){ ?>

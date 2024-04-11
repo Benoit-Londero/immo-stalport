@@ -231,7 +231,7 @@ get_header();?>
         </div>
 
         <div class="seeMore">
-          <a href="<?php echo get_bloginfo('url'). '/nos-biens/';?>" class="cta">Voir plus</a>
+          <a href="<?php echo get_bloginfo('url').'/nos-biens/';?>" class="cta">Voir plus</a>
         </div>
     <?php
         get_template_part( 'templates-parts/line-separator' );

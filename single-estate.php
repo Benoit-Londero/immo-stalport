@@ -50,24 +50,27 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
 
   switch($purp){
     case 1:
-        $purpose = 'Maison';
-        break;
+      $type = 'Maison';
+      break;
     case 2:
-        $purpose = 'Appartement';
-        break;
+      $type = 'Appartement';
+      break;
     case 3:
-        $purpose = 'Bureau';
-        break;
+      $type = 'Terrain';
+      break;
     case 4:
-        $purpose = 'Commerce';
-        break;
+      $type = 'Bureau';
+      break;
     case 5:
-        $purpose = 'Batiment industriel';
-        break;
-    case 6:
-        $purpose = 'Garage / Parking';
-        break;
-}
+      $type = 'Commerce';
+      break;
+    case 7:
+      $type = 'Batiment industriel';
+      break;
+    case 7:
+      $type = 'Garage / Parking';
+      break;
+  } 
 
 
 get_header();
@@ -93,9 +96,10 @@ get_template_part( 'templates-parts/whise/log' );?>
 
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
   <div class="container">
-    <?php if($estate):
-      echo '<h1>'.$purpose . ' de ' . $surface . ' m2 - ' . $chambres . ' chambre(s)<br/><strong>Faire offre àpd '.number_format($price, 0, ',', '.') . ' €</strong></h1>';
-    endif;?>
+    <?php if($estate): ?>
+      <h1><?php echo $purpose;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';?><br/>
+      <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
+    <?php endif;?>
   </div>
 </header>
 
