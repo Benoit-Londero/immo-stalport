@@ -99,7 +99,11 @@ switch($estate->category->id){
   <div class="container">
     <?php if($estate): ?>
       <h1><?php echo $type;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';endif;?><br/>
-      <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
+      <?php if($status != 2): ?>
+        <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
+      <?php else: ?>
+        <strong><?php echo number_format($price, 0, ',', '.');?> € / mois</strong></h1>
+      <?php endif;?>
     <?php endif;?>
   </div>
 </header>
