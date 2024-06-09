@@ -59,6 +59,7 @@
           color: $primary-color;
           padding-bottom: 10px;
           font-weight: 600;
+          &.cta{ color: white; }
         }
       }
     }
