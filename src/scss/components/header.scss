@@ -55,11 +55,13 @@
           }
         }
 
-        .current-menu-item a {
-          color: $primary-color;
-          padding-bottom: 10px;
-          font-weight: 600;
-          &.cta{ color: white; }
+        .current-menu-item{
+            a {
+                color: $primary-color;
+                padding-bottom: 10px;
+                font-weight: 600;
+            }
+            &.cta a{ color: white; }
         }
       }
     }
@@ -92,11 +94,14 @@
         }
       }
 
-      .current-menu-item a {
-        color: $primary-color;
-        padding-bottom: 10px;
-        font-weight: 600;
-      }
+      .current-menu-item{
+        a {
+            color: $primary-color;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        &.cta a{ color: white; }
+    }
 
       .cta {
         border-radius: 30px;
