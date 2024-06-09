@@ -21,13 +21,13 @@
         </svg>
     </div>
 
-    <div class="cta cta-estimation">
+    <!--<div class="cta cta-estimation">
         <?php 
             $legende = get_field('legende','options');
             $liens_es = get_field('liens_estim','options');
         ?>
 
         <a href="<?php echo $liens_es['url'];?>"><?php echo $legende;?></a>
-    </div>
+    </div>-->
 
     <?php wp_body_open(); ?>
