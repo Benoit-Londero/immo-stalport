@@ -32,19 +32,27 @@ if(!isset($_GET['reference']) || is_null($_GET['reference']) || $_GET['reference
   $iconArea = get_field('icone_area','options');
   $iconGround = get_field('icone_ground','options');
   $iconRooms = get_field('icone_rooms','options');
+  $status = $estate->purposeStatus->id;
 
   $pictures = $estate->pictures;
 
   switch($status){
     case 1 : 
-      $statusName = 'A vendre';
-      break;
+        $statusName = 'A vendre';
+        break;
     case 2 : 
-      $statusName = 'À louer';
-      break;
+        $statusName = 'À louer';
+        break;
     case 3:
-      $statusName = 'Vendu';
-      break;
+        $statusName = 'Vendu';
+        break;
+    case 4:
+        $statusName = 'Loué';
+        break;
+    case 5:
+    case 6:
+        $statusName = 'Option';
+        break;
   }
 
 
@@ -99,7 +107,7 @@ switch($estate->category->id){
   <div class="container">
     <?php if($estate): ?>
       <h1><?php echo $type;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';endif;?><br/>
-      <?php if($status != 2): ?>
+      <?php if($status != 2 && $status != 4): ?>
         <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
       <?php else: ?>
         <strong><?php echo number_format($price, 0, ',', '.');?> € / mois</strong></h1>
