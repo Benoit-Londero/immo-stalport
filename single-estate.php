@@ -108,7 +108,7 @@ switch($estate->category->id){
     <?php if($estate): ?>
       <h1><?php echo $type;?> de <?php echo $surface;?> m2 <?php if($chambres): echo $chambres.' chambre(s)';endif;?><br/>
       <?php if($status != 2 && $status != 4): ?>
-        <strong>Àpd <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
+        <strong><?php if(isset($estate->makeOffer) && $estate->makeOffer){ echo 'Àpd '; }; ?> <?php echo number_format($price, 0, ',', '.');?> €</strong></h1>
       <?php else: ?>
         <strong><?php echo number_format($price, 0, ',', '.');?> € / mois</strong></h1>
       <?php endif;?>
