@@ -9,15 +9,18 @@
     #contentToHide{
         padding-bottom: 50px;
     }
+
     h2{
         text-align: center;
         color: $primary-color;
         margin: 50px auto;
+
         strong{
             color: $dark-gray;
             font-weight: 800;
         }
     }
+    
     .wrapper{
         width: 70vw;
         margin: auto;
