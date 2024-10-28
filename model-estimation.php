@@ -12,7 +12,7 @@ endif;
 
 get_template_part( 'templates-parts/header-nav');?>
 
-<header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
+<header id="header" class="header-estimation" style="background:url('<?php echo $bg_url;?>');"></header>
 <section id="estimation-model">
     <div id="contentToHide">
         <h2>Demander <strong>une estimation</strong></h2>

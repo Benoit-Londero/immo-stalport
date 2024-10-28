@@ -1,6 +1,11 @@
+.header-estimation{
+    min-height: 150px;
+}
+
 #estimation-model{
     width: 100%;
     overflow-x: hidden;
+
     #contentToHide{
         padding-bottom: 50px;
     }
@@ -18,7 +23,9 @@
         margin: auto;
         display: flex;
         justify-content: space-between;
-        .left, .right{
+
+        .left, 
+        .right{
             width: 48%;
             border-radius: 10px;
             box-sizing: border-box;
