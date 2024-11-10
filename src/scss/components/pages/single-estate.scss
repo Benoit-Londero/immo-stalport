@@ -70,8 +70,22 @@
     }
   }
 
+  .adress-estate{
+    align-items: center;
+    justify-content: center!important;
+    margin: 30px auto 0;
+    border-bottom: 2px solid $primary-color;
+
+    .adress-single-estate{
+      text-align: center;
+      font-size: 1.5rem;
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
   #detailsEstate {
-    margin-top: -250px;
+    margin-top: -280px;
 
     .descr_bien {
       border-bottom: 1px solid $dark-gray;
@@ -80,6 +94,10 @@
       p {
         margin: 50px 0;
       }
+    }
+
+    h2{
+      font-weight: 400;
     }
 
     .container {

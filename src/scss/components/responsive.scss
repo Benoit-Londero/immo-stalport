@@ -860,13 +860,21 @@
         .col-g {
           width: 100%;
           max-height: 250px;
+
+          a{
+            max-height: 250px;
+          }
         }
 
         .col-d {
           flex-direction: row;
           width: 100%;
-          max-height: 120px;
+          max-height: 190px;
           gap: 10px;
+
+          a{
+            max-height: 190px;
+          }
         }
       }
     }

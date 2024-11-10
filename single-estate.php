@@ -132,6 +132,15 @@ switch($estate->category->id){
       <?php if($img_3):?><a href="<?php echo $img_3;?>" data-fslightbox><img src="<?php echo $img_3;?>" /></a><?php endif;?>
     </div>
   </div>
+  <div class="adress-estate container">
+    <?php 
+      $adress = $estate->address;
+      $number = $estate->number;
+      $city   = $estate->city;
+
+      echo '<p class="adress-single-estate">'. $adress . ' , ' . $number . ' - ' . $city . '</p>';
+    ?>
+  </div>
 </section>
 
 <section id="detailsEstate">
