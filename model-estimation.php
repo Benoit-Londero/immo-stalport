@@ -19,7 +19,7 @@ get_template_part( 'templates-parts/header-nav');?>
         <div class="wrapper">
             <a class="left" id="displayIframe">
                 <div class="icon"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/house-laptop.svg"></div>
-                <h3>Estimation en ligne</h3>
+                <h3 class="estOnline">Estimation en ligne</h3>
                 <p><i class="fa-solid fa-chevron-right"></i> Estimation indicative en quelques clics</p>
                 <p><i class="fa-solid fa-chevron-right"></i> Gratuit et sans engagement</p>
                 <p><i class="fa-solid fa-chevron-right"></i> Réalisé par nos algorithmes</p>
