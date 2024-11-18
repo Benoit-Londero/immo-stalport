@@ -115,11 +115,11 @@ function getListEstate($token, $lang = 'fr-BE'){
   if($lang == 'nl-NL'){
     $langCode = 'nl';
   }
-  if(is_page(215)){
+  if(is_page(229)){
     array_push($purpose,1,3);
   }else if(is_page(213)){
     array_push($purpose,2);
-  } else if(is_page(298)){
+  } else if(is_page(728)){
     array_push($purpose,null);
     $isParent = true;
   }
