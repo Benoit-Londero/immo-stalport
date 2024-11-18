@@ -281,7 +281,6 @@ function getChildEstate($token, $parentId, $lang = 'fr-BE'){
   return isset($result->estates) ? $result : 'no-estate';
 }
 
-
 function getListEstateOfTheMonth($token, $lang = 'fr-BE'){
 
   //Url Token Client

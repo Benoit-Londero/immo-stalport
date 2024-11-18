@@ -11,6 +11,7 @@ if(isset($estatesRequest->estates)){
   $estateCount = $estatesRequest->totalCount;
 }
 
+
 $investmentEstate = false;
 
 foreach($estates as $estate):

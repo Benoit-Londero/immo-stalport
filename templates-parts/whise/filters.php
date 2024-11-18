@@ -92,7 +92,7 @@
     </div>
   </div>
 
-  <div class="input-select">
+  <!-- <div class="input-select">
     <div class="select-custom">
       <select class="select_cp select_3_localites" name="cp[]" multiple="multiple" style="text-transform:uppercase;">
         <?php foreach( $listLocalite as $localite){ ?>
@@ -100,7 +100,7 @@
         <?php };?>
       </select>
     </div>
-  </div>
+  </div> -->
 
   <div class="input-select one-only">
     <div class="select-custom">
