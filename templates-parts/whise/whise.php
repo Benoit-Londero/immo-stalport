@@ -42,15 +42,15 @@ function getClientToken($token){
 
   //The data you want to send via POST
 
-  // $fields = [
-  //   'ClientId' => '10664',
-  //   'OfficeId' => '13244'
-  // ];
-
   $fields = [
-    'ClientId' => 11149,
-    'OfficeId' => 13786
+    'ClientId' => '10664',
+    'OfficeId' => '13244'
   ];
+
+  // $fields = [
+  //   'ClientId' => 11149,
+  //   'OfficeId' => 13786
+  // ];
 
   $authorization = "Authorization: Bearer " . $token;
 
