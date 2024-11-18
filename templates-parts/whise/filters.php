@@ -92,6 +92,16 @@
     </div>
   </div>
 
+  <div class="input-select">
+    <div class="select-custom">
+      <select class="select_cp select_3_localites" name="cp[]" multiple="multiple" style="text-transform:uppercase;">
+        <?php foreach( $listLocalite as $localite){ ?>
+          <option value="<?php echo $localite->zip;?>"><?php echo $localite->zip;?></option>
+        <?php };?>
+      </select>
+    </div>
+  </div>
+
   <div class="input-select one-only">
     <div class="select-custom">
       <p class="select-custom-lib"><span data-lib="Chambres">Chambres</span><i class="fa-solid fa-chevron-down"></i></p>
@@ -119,6 +129,7 @@
   <div class="input-text">
     <input type="number" name="prixMaximum" placeholder="Prix max."  <?php if(!empty($_GET['prixMaximum'])) { ?>value="<?php $_GET['prixMaximum']; ?>" <?php } ?>>
   </div>
+  
 
   <div class="buttons-container">
     <input type="hidden" name="listPage" <?php if(!empty($_GET['listPage'])) { ?>value="<?php $_GET['listPage']; ?>"<?php } ?>>

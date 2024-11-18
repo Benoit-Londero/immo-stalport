@@ -42,9 +42,14 @@ function getClientToken($token){
 
   //The data you want to send via POST
 
+  // $fields = [
+  //   'ClientId' => '10664',
+  //   'OfficeId' => '13244'
+  // ];
+
   $fields = [
-    'ClientId' => '10664',
-    'OfficeId' => '13244'
+    'ClientId' => 11149,
+    'OfficeId' => 13786
   ];
 
   $authorization = "Authorization: Bearer " . $token;
@@ -100,6 +105,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   $purpose = array();
   $listType = null;
   $langCode = 'fr';
+  $isParent = false;
 
   //Tri
   $field = 'createDateTime';
@@ -113,6 +119,9 @@ function getListEstate($token, $lang = 'fr-BE'){
     array_push($purpose,1,3);
   }else if(is_page(213)){
     array_push($purpose,2);
+  } else if(is_page(298)){
+    array_push($purpose,null);
+    $isParent = true;
   }
 
   if(!empty($_GET['reference'])){
@@ -188,6 +197,7 @@ function getListEstate($token, $lang = 'fr-BE'){
       'ZipCodes' => $localiteIds,
       'CategoryIds' => $listType,
       'LanguageId' => $lang,
+      'isParent' => $isParent,
       'Rooms' => $nbrChambre,
       'PriceRange' => array(
         'Max' => $prixMaximum,
@@ -224,6 +234,53 @@ function getListEstate($token, $lang = 'fr-BE'){
     return 'no-estate';
   }
 }
+
+function getChildEstate($token, $parentId, $lang = 'fr-BE'){
+  $langCode = ($lang == 'nl-NL') ? 'nl' : 'fr';
+  
+  // Tri
+  $field = 'createDateTime';
+  $asc = false;
+
+  // URL de l'API Whise
+  $url = 'https://api.whise.eu/v1/estates/list';
+
+  // Données de filtre et tri
+  $fieldsArray = array(
+    'Filter' => array(
+      'ProjectId' => intval($parentId),
+    ),
+    'Sort' => array(
+      array(
+        'Ascending' => $asc,
+        'Field' => $field
+      ),
+    )
+  );
+
+  $fields = json_encode($fieldsArray);
+  $authorization = "Authorization: Bearer " . $token;
+
+  // Requête cURL
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  $result = curl_exec($ch);
+
+  // Vérifie si cURL a échoué
+  if ($result === false) {
+    return 'no-estate';
+  }
+
+  $result = json_decode($result);
+
+  return isset($result->estates) ? $result : 'no-estate';
+}
+
 
 function getListEstateOfTheMonth($token, $lang = 'fr-BE'){
 

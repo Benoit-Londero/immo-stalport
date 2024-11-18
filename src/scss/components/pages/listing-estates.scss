@@ -1,4 +1,5 @@
 .page-template-listing-estates,
+.page-template-listing-projets,
 .page-template-reference {
   #title_listing {
     h1 {
@@ -12,9 +13,11 @@
 
       strong {
         font-weight: 700;
+        color: $primary-color;
       }
     }
   }
+  
   #listingEstates {
     .container {
 

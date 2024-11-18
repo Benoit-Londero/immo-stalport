@@ -1,7 +1,6 @@
 <?php /* Template Name: homepage */
 
 include 'templates-parts/whise/whise.php';
-get_template_part( 'templates-parts/whise/log.php' );
 
 $tokenClient = getClientToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlhdCI6MTcwODg5MTE2Nn0.eyJzZXJ2aWNlQ29uc3VtZXJJZCI6MTUzMCwidHlwZUlkIjo0LCJjbGllbnRJZCI6MTA2NjR9.HV20SItaD7PrgcIvWXg4uRpv_Yfo77O_lDDht5BxL3Q');
 $estatesRequest = getListEstateHome($tokenClient, getWhiseLanguageCode());
@@ -19,7 +18,10 @@ $subCategoryList = getSubCategory();
 
 $baseurl = basename($_SERVER['REQUEST_URI']);
 
-$investmentEstate = $args['investmentEstate'];
+if(isset($args)):
+  $investmentEstate = $args['investmentEstate'];
+endif;
+
 $listLocalite = getLocalite($tokenClient);
 
 $listType = array();
@@ -50,7 +52,7 @@ get_header();?>
                       <?php echo get_sub_field('titre');?>
                       <?php $cta = get_sub_field('liens');?> 
                     </span>
-                    <a href="<?php echo $scta['url'];?>" class="cta"><?php echo $cta['title'];?></a>
+                    <?php if(!empty($cta)):?><a href="<?php echo $scta['url'];?>" class="cta"><?php echo $cta['title'];?></a><?php endif;?>
                 </div>
             </div>
             <?php endif;?>
