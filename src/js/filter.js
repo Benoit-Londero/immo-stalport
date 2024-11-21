@@ -5,6 +5,12 @@ $(document).ready(function () {
     debug: true,
   });
 
+  $(".select_3_localites").select2({
+    placeholder: "Code Postal",
+    allowClear: true,
+    debug: true,
+  });
+
   $(".select-custom-lib").click(function (event) {
     event.stopPropagation();
     $(".select-custom-container").removeClass("open");

@@ -103,7 +103,7 @@ function getListEstateHome($token,$lang = 'fr-BE'){
 
 function getListEstate($token, $lang = 'fr-BE'){
   $purpose = array();
-  $listType = null;
+  $listType = array();
   $langCode = 'fr';
   $isParent = false;
 
@@ -115,6 +115,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   if($lang == 'nl-NL'){
     $langCode = 'nl';
   }
+
   if(is_page(215)){
     array_push($purpose,1,3);
   }else if(is_page(213)){
@@ -123,6 +124,18 @@ function getListEstate($token, $lang = 'fr-BE'){
     array_push($purpose,null);
     $isParent = true;
   }
+
+  if(!empty($_GET['type'])){
+    $type = $_GET['type'];
+
+    foreach($type as $t):
+     array_push($listType, $t);
+    endforeach;
+
+  } else {
+    $listType = null;
+  }
+
 
   if(!empty($_GET['reference'])){
     $toRedirect = get_bloginfo('url') . '/?reference=' . $_GET['reference'];
@@ -136,6 +149,10 @@ function getListEstate($token, $lang = 'fr-BE'){
 
   if(!empty($_GET['invest'])){
       $investmentEstate = true;
+  }
+
+  if(!empty($_GET['cp'])){
+    $localiteIds = $_GET['cp'];
   }
 
   $page = 0;

@@ -4,7 +4,7 @@
   $estatesRequest = getListEstateHome($tokenClient, getWhiseLanguageCode());
   
   $filters = false;
-
+  $getCp = array();
   $listType = array();
   if(!empty($_GET['type'])){
     $listType = $_GET['type'];
@@ -37,6 +37,11 @@
   }
   if(!empty($_GET['investmentEstate'])){
     $investmentEstate = $_GET['investmentEstate'];
+    $filters = true;
+  }
+
+  if(!empty($_GET['cp'])){
+    $getCp = $_GET['cp'];
     $filters = true;
   }
 
@@ -92,15 +97,15 @@
     </div>
   </div>
 
-  <!-- <div class="input-select">
+  <div class="input-select">
     <div class="select-custom">
       <select class="select_cp select_3_localites" name="cp[]" multiple="multiple" style="text-transform:uppercase;">
-        <?php foreach( $listLocalite as $localite){ ?>
+        <?php foreach( $listLocalite as $localite): ?>
           <option value="<?php echo $localite->zip;?>"><?php echo $localite->zip;?></option>
-        <?php };?>
+        <?php endforeach;?>
       </select>
     </div>
-  </div> -->
+  </div>
 
   <div class="input-select one-only">
     <div class="select-custom">
@@ -129,7 +134,6 @@
   <div class="input-text">
     <input type="number" name="prixMaximum" placeholder="Prix max."  <?php if(!empty($_GET['prixMaximum'])) { ?>value="<?php $_GET['prixMaximum']; ?>" <?php } ?>>
   </div>
-  
 
   <div class="buttons-container">
     <input type="hidden" name="listPage" <?php if(!empty($_GET['listPage'])) { ?>value="<?php $_GET['listPage']; ?>"<?php } ?>>
@@ -191,7 +195,23 @@
                 unset($queryParamsLocalite['localite']); // Change 'chambre' to the respective filter key
 
                 $newQueryLocalite = http_build_query($queryParamsLocalite);
-                echo "<a href='?{$newQueryLocalite}'>".$rLocal."</a>";
+
+                foreach( $listLocalite as $localite){
+
+                  if($rLocal == $localite->zip):
+                    echo "<a href='?{$newQueryLocalite}'>".$localite->name."</a>";
+                  endif;
+                }
+              endforeach;
+            endif;
+
+            if($_GET['cp']):
+              foreach($getCp as $cp):
+                $queryParamsLocalite = $_GET; // Copies the current query parameters
+                unset($queryParamsLocalite['cp']); // Change 'chambre' to the respective filter key
+
+                $newQueryLocalite = http_build_query($queryParamsLocalite);
+                echo "<a href='?{$newQueryLocalite}'>".$cp." | x</a>";
               endforeach;
             endif;
 

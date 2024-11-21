@@ -9,6 +9,10 @@
   }
 }
 
+.select2-container--default{
+  width: 100% !important;
+}
+
 body {
   min-height: 100dvh;
   background: $light;
