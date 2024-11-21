@@ -156,7 +156,7 @@ get_header();?>
           <ul id="estates" class="list-container <?php if(count($estates) <= 3){ echo "one-line"; }else if(count($estates) <= 6 && count($estates) > 3){ echo 'two-line'; } ?>">
             <?php foreach($estates as $estate): 
               $status = $estate->status->id;
-              $statusName = '';
+              $availableType = '';
 
               $chambres = $estate->rooms;
               $terrain = $estate->groundArea;
@@ -226,7 +226,7 @@ get_header();?>
                             
                   <div class="item-content">
                     <div class="item-title">
-                      <?php echo '<p><strong>'.$type.'</strong> - '. $statusName . ' - <strong>'.$estate->city.'</strong></p>';?>
+                      <?php echo '<p><strong>'.$type.'</strong> - '. $availableType . ' - <strong>'.$estate->city.'</strong></p>';?>
                     </div>
 
                     <div class="item-detail">
