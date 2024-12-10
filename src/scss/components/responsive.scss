@@ -954,4 +954,32 @@
   .page-template-informations #outro .cold {
     padding-left: 10%;
   }
+
+  .page-template-single-projet{
+    .swiper-projet{
+      .swiper-button-next{
+        right: -40px;
+      }
+
+      .swiper-button-prev{
+        left: -40px;
+      }
+    }
+
+    #listing-biens-projet{
+      overflow: scroll;
+    }
+
+    #galerie{
+      .container{
+        position:relative;
+
+        .cold{
+          position:absolute;
+          width: 70%;
+          right: 0;
+        }
+      }
+    }
+  }
 }
