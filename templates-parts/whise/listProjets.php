@@ -103,7 +103,7 @@ $baseurl = basename($_SERVER['REQUEST_URI']);
             } 
            
             if($isAvailable): ?>
-              <a href="<?php echo get_page_link( 314 ); ?>?reference=<?php echo $estate->id; ?>&prefill=<?php echo $estate->id; ?>&Whise=<?php echo $estate->referenceNumber; ?>">
+              <a href="<?php echo get_page_link( 740 );?>?reference=<?php echo $estate->id; ?>&prefill=<?php echo $estate->id; ?>&Whise=<?php echo $estate->referenceNumber; ?>">
             <?php else: 
               echo '<div>';
             endif; ?>

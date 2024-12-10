@@ -121,7 +121,7 @@ function getListEstate($token, $lang = 'fr-BE'){
   }else if(is_page(213)){
     array_push($purpose,2);
   } else if(is_page(728)){
-    array_push($purpose,null);
+    $purpose = null;
     $isParent = true;
   }
 
@@ -135,7 +135,6 @@ function getListEstate($token, $lang = 'fr-BE'){
   } else {
     $listType = null;
   }
-
 
   if(!empty($_GET['reference'])){
     $toRedirect = get_bloginfo('url') . '/?reference=' . $_GET['reference'];
@@ -159,12 +158,14 @@ function getListEstate($token, $lang = 'fr-BE'){
   if(!empty($_GET['listPage'])){
     $page = $_GET['listPage'] * 9;
   }
+	
   $nbrChambre = null;
   if(!empty($_GET['chambre'])){
     $nbrChambre = $_GET['chambre'];
   }
-  $prixMinimum = 0;
-  $prixMaximum = 99999999;
+	
+  $prixMinimum = null;
+  $prixMaximum = null;
 
   if(!empty($_GET['prixMaximum'])){
     $prixMaximum = intval($_GET['prixMaximum']);
@@ -173,6 +174,8 @@ function getListEstate($token, $lang = 'fr-BE'){
   $regionIds = array();
   if(!empty($_GET['region'])){
     $regionIds = $_GET['region'];
+  } else {
+	$regionIds = null;
   }
 
   if(!empty($_GET['order'])){
@@ -218,7 +221,7 @@ function getListEstate($token, $lang = 'fr-BE'){
       'Rooms' => $nbrChambre,
       'PriceRange' => array(
         'Max' => $prixMaximum,
-        'Min' => 0  ,
+        'Min' => null  ,
       )
     ),
     'Sort' => array(

@@ -24,6 +24,7 @@ if($estate == 'no-estate') {
     exit;
 }
 
+
 $listDetails = getListCategory($tokenClient);
 $categoryList = getAllTypeBien($listDetails->purposeAndCategory);
 $subCategoryList = getSubCategory();
@@ -37,6 +38,13 @@ $peb = $estate->energyClass;
 $isNew = caclulateIsNew($estate->createDateTime);
 $status = $estate->purposeStatus->id;
 $pictures = $estate->pictures;
+
+$name = $estate->name;
+
+$childRequest = getChildEstate($tokenClient, $parentId, getWhiseLanguageCode());
+$child = $childRequest->estates ?? array();
+
+$count = count($child);
 
 // Déterminer le statut
 switch ($status) {
@@ -89,18 +97,22 @@ switch ($estate->category->id) {
 
 get_header();
 
-$bg_header = get_field('bg_header');
-$bg_url = $bg_header ? $bg_header['url'] : get_template_directory_uri().'/assets/img/bg-default.jpg';
+$bg_header = $pictures[0]->urlXXL;
+$bg_url = $bg_header ? $bg_header : get_template_directory_uri().'/assets/img/bg-default.jpg';
 
 get_template_part( 'templates-parts/header-nav');?>
 
 <header id="header" style="background:url('<?php echo $bg_url; ?>');">
     <div class="container">
         <?php if ($estate): ?>
-            <h1><?php echo $type; ?> de <?php echo $surface; ?> m² <?php if ($chambres): echo $chambres . ' chambre(s)'; endif; ?><br/>
+          <div class="title">
+            <h2>Venez découvrir</h2>
+            <h1><strong><?php echo $name; ?></strong><br />
+              <?php echo $count . ' ' . $type . '(s)'; ?><br/>
             <?php if ($status != 2 && $status != 4): ?>
-                <strong><?php echo 'Àpd '; ?> <?php echo number_format($price, 0, ',', '.'); ?> €</strong></h1>
+                <strong class="cta"><?php echo 'Àpd '; ?> <?php echo number_format($price, 0, ',', '.'); ?> €</strong></h1>
             <?php endif; ?>
+          </div>
         <?php endif; ?>
     </div>
 </header>
@@ -115,7 +127,7 @@ get_template_part( 'templates-parts/header-nav');?>
     ?>
 
     <div class="colg">
-      <div class="intro from-bottom"><h1>6 appartements</h1></div>
+      <div class="intro from-bottom"><h1>Découvrez nos <strong> <?php echo $count;?> appartements</strong></h1></div>
     </div>
 
     <div class="cold">
@@ -142,15 +154,14 @@ get_template_part( 'templates-parts/header-nav');?>
 
 <section id="listing-biens-projet">
   <div class="container table-children">
-    <h2><strong>Biens</strong> disponibles</h2>
     <?php 
       // Récupérer les biens enfants
-      $childRequest = getChildEstate($tokenClient, $parentId, getWhiseLanguageCode());
-      $child = $childRequest->estates ?? array();
+      $status = $childEstate->purposeStatus->id;?>
 
-      $status = $childEstate->purposeStatus->id;
+      <h2><strong><?php echo $count;?> Biens</strong> disponibles</h2>
 
-      if(!empty($child)): ?>
+
+      <?php if(!empty($child)): ?>
         <table>
           <thead>
             <tr>

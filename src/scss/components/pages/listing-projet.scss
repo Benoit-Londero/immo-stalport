@@ -1,4 +1,53 @@
 .page-template-single-projet{
+  header{
+    position:relative;
+
+    &::before{
+      content:'';
+      position : absolute;
+      width: 100%;
+      height:100%;
+      top: 0;
+      left: 0;
+      background-color: $dark;
+      opacity: .7;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .title{
+      text-align: center;
+      position: relative;
+
+      h2{
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        color: $light;
+      }
+      h1{
+        position: relative;
+        bottom: auto;
+        top: auto;
+      }
+
+      .cta{
+        font-size: 1.5rem;
+        margin: auto;
+        font-weight: 400;
+        margin-top: 30px;
+        padding: 0 30px;
+      }
+    }
+
+    
+  }
+
   #introduction {
     padding-bottom: 5vh;
       
@@ -81,7 +130,7 @@
 
   #slider-bottom{
     position: relative;
-    z-index: 0;
+    z-index: 15;
   }
 
   #listing-biens-projet{
