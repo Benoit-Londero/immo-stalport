@@ -131,6 +131,25 @@
   #slider-bottom{
     position: relative;
     z-index: 15;
+
+    .swiper-projet{
+      height: 300px;
+
+      .swiper-wrapper{
+        .swiper-slide{
+          position:relative;
+
+          &::before{
+            padding-top: calc(30% - 1.5rem);
+          }
+
+          a{
+            height: 300px;
+            max-height: 300px;
+          }
+        }
+      }
+    }
   }
 
   #listing-biens-projet{
