@@ -260,6 +260,19 @@ get_template_part( 'templates-parts/header-nav');?>
   </div>
 </section>
 
+<section id="disclaimer_banner" style="background:url('<?php echo $pictures[1]->urlXXL;?>') no-repeat;background-size:cover;"></section>
+
+<section id="galerie">
+  <div class="container columns">
+    <div class="colg">
+      <div class="block-img"><img src="<?php echo $pictures[2]->urlXXL;?>"/></div>
+    </div>
+    <div class="cold">
+      <div class="block-img"><img src="<?php echo $pictures[3]->urlXXL;?>"/></div>
+    </div>
+  </div>
+</section>
+
 <?php 
   get_template_part('templates-parts/section-cta-contact');
   get_template_part('templates-parts/section-estimation');

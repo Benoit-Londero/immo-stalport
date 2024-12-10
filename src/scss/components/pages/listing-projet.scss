@@ -223,4 +223,35 @@
       }
     }
   }
+
+  #disclaimer_banner{
+    height: 350px;
+    background-position: center center !important;
+  }
+
+  #galerie{
+    .container{
+      width: 100vw;
+      padding: 100px 0;
+
+      .colg{
+        .block-img{
+          margin-left: 10vw;
+          width: 500px;
+        }
+      }
+
+      .cold{
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: 150px;
+
+        .block-img{
+          width: 60%;
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
